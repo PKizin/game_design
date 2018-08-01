@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/my_game.dir/main.cpp.o CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.o CMakeFiles/my_game.dir/classifier/human_classifier.cpp.o  -o my_game -rdynamic 
