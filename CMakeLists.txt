@@ -4,13 +4,15 @@ set(CMAKE_CXX_STANDARD 14)
 project(my_game)
 
 file(GLOB SOURCES
-    *.h
     *.cpp
-    classifier/*.cpp
+    *.h
+    classifier/inc/*.h
+    classifier/src/*.cpp
 )
 
 include_directories(
-    classifier
+    classifier/inc
+    classifier/src
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})

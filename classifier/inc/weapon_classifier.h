@@ -8,7 +8,7 @@
 class WeaponClassifier : public IClassifier {
 public:
     WeaponClassifier();
-    virtual ~WeaponClassifier();
+    virtual ~WeaponClassifier() { }
 
     int get_class() const override;
     int get_type() const override;

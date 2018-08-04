@@ -123,59 +123,248 @@ my_game/fast:
 	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/build
 .PHONY : my_game/fast
 
-classifier/armor_classifier.o: classifier/armor_classifier.cpp.o
+classifier/src/armor_classifier.o: classifier/src/armor_classifier.cpp.o
 
-.PHONY : classifier/armor_classifier.o
-
-# target to build an object file
-classifier/armor_classifier.cpp.o:
-	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.o
-.PHONY : classifier/armor_classifier.cpp.o
-
-classifier/armor_classifier.i: classifier/armor_classifier.cpp.i
-
-.PHONY : classifier/armor_classifier.i
-
-# target to preprocess a source file
-classifier/armor_classifier.cpp.i:
-	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.i
-.PHONY : classifier/armor_classifier.cpp.i
-
-classifier/armor_classifier.s: classifier/armor_classifier.cpp.s
-
-.PHONY : classifier/armor_classifier.s
-
-# target to generate assembly for a file
-classifier/armor_classifier.cpp.s:
-	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.s
-.PHONY : classifier/armor_classifier.cpp.s
-
-classifier/human_classifier.o: classifier/human_classifier.cpp.o
-
-.PHONY : classifier/human_classifier.o
+.PHONY : classifier/src/armor_classifier.o
 
 # target to build an object file
-classifier/human_classifier.cpp.o:
-	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/human_classifier.cpp.o
-.PHONY : classifier/human_classifier.cpp.o
+classifier/src/armor_classifier.cpp.o:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/armor_classifier.cpp.o
+.PHONY : classifier/src/armor_classifier.cpp.o
 
-classifier/human_classifier.i: classifier/human_classifier.cpp.i
+classifier/src/armor_classifier.i: classifier/src/armor_classifier.cpp.i
 
-.PHONY : classifier/human_classifier.i
+.PHONY : classifier/src/armor_classifier.i
 
 # target to preprocess a source file
-classifier/human_classifier.cpp.i:
-	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/human_classifier.cpp.i
-.PHONY : classifier/human_classifier.cpp.i
+classifier/src/armor_classifier.cpp.i:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/armor_classifier.cpp.i
+.PHONY : classifier/src/armor_classifier.cpp.i
 
-classifier/human_classifier.s: classifier/human_classifier.cpp.s
+classifier/src/armor_classifier.s: classifier/src/armor_classifier.cpp.s
 
-.PHONY : classifier/human_classifier.s
+.PHONY : classifier/src/armor_classifier.s
 
 # target to generate assembly for a file
-classifier/human_classifier.cpp.s:
-	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/human_classifier.cpp.s
-.PHONY : classifier/human_classifier.cpp.s
+classifier/src/armor_classifier.cpp.s:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/armor_classifier.cpp.s
+.PHONY : classifier/src/armor_classifier.cpp.s
+
+classifier/src/human_classifier.o: classifier/src/human_classifier.cpp.o
+
+.PHONY : classifier/src/human_classifier.o
+
+# target to build an object file
+classifier/src/human_classifier.cpp.o:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/human_classifier.cpp.o
+.PHONY : classifier/src/human_classifier.cpp.o
+
+classifier/src/human_classifier.i: classifier/src/human_classifier.cpp.i
+
+.PHONY : classifier/src/human_classifier.i
+
+# target to preprocess a source file
+classifier/src/human_classifier.cpp.i:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/human_classifier.cpp.i
+.PHONY : classifier/src/human_classifier.cpp.i
+
+classifier/src/human_classifier.s: classifier/src/human_classifier.cpp.s
+
+.PHONY : classifier/src/human_classifier.s
+
+# target to generate assembly for a file
+classifier/src/human_classifier.cpp.s:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/human_classifier.cpp.s
+.PHONY : classifier/src/human_classifier.cpp.s
+
+classifier/src/jewerly_classifier.o: classifier/src/jewerly_classifier.cpp.o
+
+.PHONY : classifier/src/jewerly_classifier.o
+
+# target to build an object file
+classifier/src/jewerly_classifier.cpp.o:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/jewerly_classifier.cpp.o
+.PHONY : classifier/src/jewerly_classifier.cpp.o
+
+classifier/src/jewerly_classifier.i: classifier/src/jewerly_classifier.cpp.i
+
+.PHONY : classifier/src/jewerly_classifier.i
+
+# target to preprocess a source file
+classifier/src/jewerly_classifier.cpp.i:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/jewerly_classifier.cpp.i
+.PHONY : classifier/src/jewerly_classifier.cpp.i
+
+classifier/src/jewerly_classifier.s: classifier/src/jewerly_classifier.cpp.s
+
+.PHONY : classifier/src/jewerly_classifier.s
+
+# target to generate assembly for a file
+classifier/src/jewerly_classifier.cpp.s:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/jewerly_classifier.cpp.s
+.PHONY : classifier/src/jewerly_classifier.cpp.s
+
+classifier/src/monster_classifier.o: classifier/src/monster_classifier.cpp.o
+
+.PHONY : classifier/src/monster_classifier.o
+
+# target to build an object file
+classifier/src/monster_classifier.cpp.o:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/monster_classifier.cpp.o
+.PHONY : classifier/src/monster_classifier.cpp.o
+
+classifier/src/monster_classifier.i: classifier/src/monster_classifier.cpp.i
+
+.PHONY : classifier/src/monster_classifier.i
+
+# target to preprocess a source file
+classifier/src/monster_classifier.cpp.i:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/monster_classifier.cpp.i
+.PHONY : classifier/src/monster_classifier.cpp.i
+
+classifier/src/monster_classifier.s: classifier/src/monster_classifier.cpp.s
+
+.PHONY : classifier/src/monster_classifier.s
+
+# target to generate assembly for a file
+classifier/src/monster_classifier.cpp.s:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/monster_classifier.cpp.s
+.PHONY : classifier/src/monster_classifier.cpp.s
+
+classifier/src/potion_classifier.o: classifier/src/potion_classifier.cpp.o
+
+.PHONY : classifier/src/potion_classifier.o
+
+# target to build an object file
+classifier/src/potion_classifier.cpp.o:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/potion_classifier.cpp.o
+.PHONY : classifier/src/potion_classifier.cpp.o
+
+classifier/src/potion_classifier.i: classifier/src/potion_classifier.cpp.i
+
+.PHONY : classifier/src/potion_classifier.i
+
+# target to preprocess a source file
+classifier/src/potion_classifier.cpp.i:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/potion_classifier.cpp.i
+.PHONY : classifier/src/potion_classifier.cpp.i
+
+classifier/src/potion_classifier.s: classifier/src/potion_classifier.cpp.s
+
+.PHONY : classifier/src/potion_classifier.s
+
+# target to generate assembly for a file
+classifier/src/potion_classifier.cpp.s:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/potion_classifier.cpp.s
+.PHONY : classifier/src/potion_classifier.cpp.s
+
+classifier/src/rock_classifier.o: classifier/src/rock_classifier.cpp.o
+
+.PHONY : classifier/src/rock_classifier.o
+
+# target to build an object file
+classifier/src/rock_classifier.cpp.o:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/rock_classifier.cpp.o
+.PHONY : classifier/src/rock_classifier.cpp.o
+
+classifier/src/rock_classifier.i: classifier/src/rock_classifier.cpp.i
+
+.PHONY : classifier/src/rock_classifier.i
+
+# target to preprocess a source file
+classifier/src/rock_classifier.cpp.i:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/rock_classifier.cpp.i
+.PHONY : classifier/src/rock_classifier.cpp.i
+
+classifier/src/rock_classifier.s: classifier/src/rock_classifier.cpp.s
+
+.PHONY : classifier/src/rock_classifier.s
+
+# target to generate assembly for a file
+classifier/src/rock_classifier.cpp.s:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/rock_classifier.cpp.s
+.PHONY : classifier/src/rock_classifier.cpp.s
+
+classifier/src/terrain_classifier.o: classifier/src/terrain_classifier.cpp.o
+
+.PHONY : classifier/src/terrain_classifier.o
+
+# target to build an object file
+classifier/src/terrain_classifier.cpp.o:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/terrain_classifier.cpp.o
+.PHONY : classifier/src/terrain_classifier.cpp.o
+
+classifier/src/terrain_classifier.i: classifier/src/terrain_classifier.cpp.i
+
+.PHONY : classifier/src/terrain_classifier.i
+
+# target to preprocess a source file
+classifier/src/terrain_classifier.cpp.i:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/terrain_classifier.cpp.i
+.PHONY : classifier/src/terrain_classifier.cpp.i
+
+classifier/src/terrain_classifier.s: classifier/src/terrain_classifier.cpp.s
+
+.PHONY : classifier/src/terrain_classifier.s
+
+# target to generate assembly for a file
+classifier/src/terrain_classifier.cpp.s:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/terrain_classifier.cpp.s
+.PHONY : classifier/src/terrain_classifier.cpp.s
+
+classifier/src/tree_classifier.o: classifier/src/tree_classifier.cpp.o
+
+.PHONY : classifier/src/tree_classifier.o
+
+# target to build an object file
+classifier/src/tree_classifier.cpp.o:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/tree_classifier.cpp.o
+.PHONY : classifier/src/tree_classifier.cpp.o
+
+classifier/src/tree_classifier.i: classifier/src/tree_classifier.cpp.i
+
+.PHONY : classifier/src/tree_classifier.i
+
+# target to preprocess a source file
+classifier/src/tree_classifier.cpp.i:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/tree_classifier.cpp.i
+.PHONY : classifier/src/tree_classifier.cpp.i
+
+classifier/src/tree_classifier.s: classifier/src/tree_classifier.cpp.s
+
+.PHONY : classifier/src/tree_classifier.s
+
+# target to generate assembly for a file
+classifier/src/tree_classifier.cpp.s:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/tree_classifier.cpp.s
+.PHONY : classifier/src/tree_classifier.cpp.s
+
+classifier/src/weapon_classifier.o: classifier/src/weapon_classifier.cpp.o
+
+.PHONY : classifier/src/weapon_classifier.o
+
+# target to build an object file
+classifier/src/weapon_classifier.cpp.o:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/weapon_classifier.cpp.o
+.PHONY : classifier/src/weapon_classifier.cpp.o
+
+classifier/src/weapon_classifier.i: classifier/src/weapon_classifier.cpp.i
+
+.PHONY : classifier/src/weapon_classifier.i
+
+# target to preprocess a source file
+classifier/src/weapon_classifier.cpp.i:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/weapon_classifier.cpp.i
+.PHONY : classifier/src/weapon_classifier.cpp.i
+
+classifier/src/weapon_classifier.s: classifier/src/weapon_classifier.cpp.s
+
+.PHONY : classifier/src/weapon_classifier.s
+
+# target to generate assembly for a file
+classifier/src/weapon_classifier.cpp.s:
+	$(MAKE) -f CMakeFiles/my_game.dir/build.make CMakeFiles/my_game.dir/classifier/src/weapon_classifier.cpp.s
+.PHONY : classifier/src/weapon_classifier.cpp.s
 
 main.o: main.cpp.o
 
@@ -213,12 +402,33 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... my_game"
-	@echo "... classifier/armor_classifier.o"
-	@echo "... classifier/armor_classifier.i"
-	@echo "... classifier/armor_classifier.s"
-	@echo "... classifier/human_classifier.o"
-	@echo "... classifier/human_classifier.i"
-	@echo "... classifier/human_classifier.s"
+	@echo "... classifier/src/armor_classifier.o"
+	@echo "... classifier/src/armor_classifier.i"
+	@echo "... classifier/src/armor_classifier.s"
+	@echo "... classifier/src/human_classifier.o"
+	@echo "... classifier/src/human_classifier.i"
+	@echo "... classifier/src/human_classifier.s"
+	@echo "... classifier/src/jewerly_classifier.o"
+	@echo "... classifier/src/jewerly_classifier.i"
+	@echo "... classifier/src/jewerly_classifier.s"
+	@echo "... classifier/src/monster_classifier.o"
+	@echo "... classifier/src/monster_classifier.i"
+	@echo "... classifier/src/monster_classifier.s"
+	@echo "... classifier/src/potion_classifier.o"
+	@echo "... classifier/src/potion_classifier.i"
+	@echo "... classifier/src/potion_classifier.s"
+	@echo "... classifier/src/rock_classifier.o"
+	@echo "... classifier/src/rock_classifier.i"
+	@echo "... classifier/src/rock_classifier.s"
+	@echo "... classifier/src/terrain_classifier.o"
+	@echo "... classifier/src/terrain_classifier.i"
+	@echo "... classifier/src/terrain_classifier.s"
+	@echo "... classifier/src/tree_classifier.o"
+	@echo "... classifier/src/tree_classifier.i"
+	@echo "... classifier/src/tree_classifier.s"
+	@echo "... classifier/src/weapon_classifier.o"
+	@echo "... classifier/src/weapon_classifier.i"
+	@echo "... classifier/src/weapon_classifier.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

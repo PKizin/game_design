@@ -6,47 +6,41 @@
 
 #IncludeRegexTransform: 
 
-/home/gamekoff/Work/game_design/classifier/armor_classifier.cpp
+/home/gamekoff/Work/game_design/classifier/src/armor_classifier.cpp
 armor_classifier.h
-/home/gamekoff/Work/game_design/classifier/armor_classifier.h
+/home/gamekoff/Work/game_design/classifier/src/armor_classifier.h
 
-/home/gamekoff/Work/game_design/classifier/armor_classifier.h
-i_classifier.h
-/home/gamekoff/Work/game_design/classifier/i_classifier.h
-e_item_categories.h
-/home/gamekoff/Work/game_design/classifier/e_item_categories.h
-
-/home/gamekoff/Work/game_design/classifier/e_creature_categories.h
-
-/home/gamekoff/Work/game_design/classifier/e_item_categories.h
-
-/home/gamekoff/Work/game_design/classifier/human_classifier.cpp
+/home/gamekoff/Work/game_design/classifier/src/human_classifier.cpp
 human_classifier.h
-/home/gamekoff/Work/game_design/classifier/human_classifier.h
+/home/gamekoff/Work/game_design/classifier/src/human_classifier.h
 
-/home/gamekoff/Work/game_design/classifier/human_classifier.h
-i_classifier.h
-/home/gamekoff/Work/game_design/classifier/i_classifier.h
-e_creature_categories.h
-/home/gamekoff/Work/game_design/classifier/e_creature_categories.h
+/home/gamekoff/Work/game_design/classifier/src/jewerly_classifier.cpp
+jewerly_classifier.h
+/home/gamekoff/Work/game_design/classifier/src/jewerly_classifier.h
 
-/home/gamekoff/Work/game_design/classifier/i_class_classifier.h
+/home/gamekoff/Work/game_design/classifier/src/monster_classifier.cpp
+monster_classifier.h
+/home/gamekoff/Work/game_design/classifier/src/monster_classifier.h
 
-/home/gamekoff/Work/game_design/classifier/i_classifier.h
-i_class_classifier.h
-/home/gamekoff/Work/game_design/classifier/i_class_classifier.h
-i_type_classifier.h
-/home/gamekoff/Work/game_design/classifier/i_type_classifier.h
-i_material_classifier.h
-/home/gamekoff/Work/game_design/classifier/i_material_classifier.h
-i_property_classifier.h
-/home/gamekoff/Work/game_design/classifier/i_property_classifier.h
+/home/gamekoff/Work/game_design/classifier/src/potion_classifier.cpp
+potion_classifier.h
+/home/gamekoff/Work/game_design/classifier/src/potion_classifier.h
 
-/home/gamekoff/Work/game_design/classifier/i_material_classifier.h
+/home/gamekoff/Work/game_design/classifier/src/rock_classifier.cpp
+rock_classifier.h
+/home/gamekoff/Work/game_design/classifier/src/rock_classifier.h
 
-/home/gamekoff/Work/game_design/classifier/i_property_classifier.h
+/home/gamekoff/Work/game_design/classifier/src/terrain_classifier.cpp
+terrain_classifier.h
+/home/gamekoff/Work/game_design/classifier/src/terrain_classifier.h
 
-/home/gamekoff/Work/game_design/classifier/i_type_classifier.h
+/home/gamekoff/Work/game_design/classifier/src/tree_classifier.cpp
+tree_classifier.h
+/home/gamekoff/Work/game_design/classifier/src/tree_classifier.h
+
+/home/gamekoff/Work/game_design/classifier/src/weapon_classifier.cpp
+weapon_classifier.h
+/home/gamekoff/Work/game_design/classifier/src/weapon_classifier.h
 
 /home/gamekoff/Work/game_design/main.cpp
 iostream
@@ -56,37 +50,81 @@ human_classifier.h
 armor_classifier.h
 /home/gamekoff/Work/game_design/armor_classifier.h
 
-classifier/armor_classifier.h
+classifier/inc/armor_classifier.h
 i_classifier.h
-classifier/i_classifier.h
+classifier/inc/i_classifier.h
 e_item_categories.h
-classifier/e_item_categories.h
+classifier/inc/e_item_categories.h
 
-classifier/e_creature_categories.h
+classifier/inc/e_creature_categories.h
 
-classifier/e_item_categories.h
+classifier/inc/e_item_categories.h
 
-classifier/human_classifier.h
+classifier/inc/e_obstacle_categories.h
+
+classifier/inc/human_classifier.h
 i_classifier.h
-classifier/i_classifier.h
+classifier/inc/i_classifier.h
 e_creature_categories.h
-classifier/e_creature_categories.h
+classifier/inc/e_creature_categories.h
 
-classifier/i_class_classifier.h
+classifier/inc/i_class_classifier.h
 
-classifier/i_classifier.h
+classifier/inc/i_classifier.h
 i_class_classifier.h
-classifier/i_class_classifier.h
+classifier/inc/i_class_classifier.h
 i_type_classifier.h
-classifier/i_type_classifier.h
+classifier/inc/i_type_classifier.h
 i_material_classifier.h
-classifier/i_material_classifier.h
+classifier/inc/i_material_classifier.h
 i_property_classifier.h
-classifier/i_property_classifier.h
+classifier/inc/i_property_classifier.h
 
-classifier/i_material_classifier.h
+classifier/inc/i_material_classifier.h
 
-classifier/i_property_classifier.h
+classifier/inc/i_property_classifier.h
 
-classifier/i_type_classifier.h
+classifier/inc/i_type_classifier.h
+
+classifier/inc/jewerly_classifier.h
+i_classifier.h
+classifier/inc/i_classifier.h
+e_item_categories.h
+classifier/inc/e_item_categories.h
+
+classifier/inc/monster_classifier.h
+i_classifier.h
+classifier/inc/i_classifier.h
+e_creature_categories.h
+classifier/inc/e_creature_categories.h
+
+classifier/inc/potion_classifier.h
+i_classifier.h
+classifier/inc/i_classifier.h
+e_item_categories.h
+classifier/inc/e_item_categories.h
+
+classifier/inc/rock_classifier.h
+i_classifier.h
+classifier/inc/i_classifier.h
+e_obstacle_categories.h
+classifier/inc/e_obstacle_categories.h
+
+classifier/inc/terrain_classifier.h
+i_classifier.h
+classifier/inc/i_classifier.h
+e_obstacle_categories.h
+classifier/inc/e_obstacle_categories.h
+
+classifier/inc/tree_classifier.h
+i_classifier.h
+classifier/inc/i_classifier.h
+e_obstacle_categories.h
+classifier/inc/e_obstacle_categories.h
+
+classifier/inc/weapon_classifier.h
+i_classifier.h
+classifier/inc/i_classifier.h
+e_item_categories.h
+classifier/inc/e_item_categories.h
 
