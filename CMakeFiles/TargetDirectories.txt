@@ -1,3 +1,0 @@
-/home/gamekoff/Work/game_design/CMakeFiles/edit_cache.dir
-/home/gamekoff/Work/game_design/CMakeFiles/rebuild_cache.dir
-/home/gamekoff/Work/game_design/CMakeFiles/my_game.dir
