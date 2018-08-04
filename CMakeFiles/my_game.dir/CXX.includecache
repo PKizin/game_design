@@ -6,55 +6,55 @@
 
 #IncludeRegexTransform: 
 
-/home/gamekoff/Work/mygame/sources/classifier/armor_classifier.cpp
+/home/gamekoff/Work/game_design/classifier/armor_classifier.cpp
 armor_classifier.h
-/home/gamekoff/Work/mygame/sources/classifier/armor_classifier.h
+/home/gamekoff/Work/game_design/classifier/armor_classifier.h
 
-/home/gamekoff/Work/mygame/sources/classifier/armor_classifier.h
+/home/gamekoff/Work/game_design/classifier/armor_classifier.h
 i_classifier.h
-/home/gamekoff/Work/mygame/sources/classifier/i_classifier.h
+/home/gamekoff/Work/game_design/classifier/i_classifier.h
 e_item_categories.h
-/home/gamekoff/Work/mygame/sources/classifier/e_item_categories.h
+/home/gamekoff/Work/game_design/classifier/e_item_categories.h
 
-/home/gamekoff/Work/mygame/sources/classifier/e_creature_categories.h
+/home/gamekoff/Work/game_design/classifier/e_creature_categories.h
 
-/home/gamekoff/Work/mygame/sources/classifier/e_item_categories.h
+/home/gamekoff/Work/game_design/classifier/e_item_categories.h
 
-/home/gamekoff/Work/mygame/sources/classifier/human_classifier.cpp
+/home/gamekoff/Work/game_design/classifier/human_classifier.cpp
 human_classifier.h
-/home/gamekoff/Work/mygame/sources/classifier/human_classifier.h
+/home/gamekoff/Work/game_design/classifier/human_classifier.h
 
-/home/gamekoff/Work/mygame/sources/classifier/human_classifier.h
+/home/gamekoff/Work/game_design/classifier/human_classifier.h
 i_classifier.h
-/home/gamekoff/Work/mygame/sources/classifier/i_classifier.h
+/home/gamekoff/Work/game_design/classifier/i_classifier.h
 e_creature_categories.h
-/home/gamekoff/Work/mygame/sources/classifier/e_creature_categories.h
+/home/gamekoff/Work/game_design/classifier/e_creature_categories.h
 
-/home/gamekoff/Work/mygame/sources/classifier/i_class_classifier.h
+/home/gamekoff/Work/game_design/classifier/i_class_classifier.h
 
-/home/gamekoff/Work/mygame/sources/classifier/i_classifier.h
+/home/gamekoff/Work/game_design/classifier/i_classifier.h
 i_class_classifier.h
-/home/gamekoff/Work/mygame/sources/classifier/i_class_classifier.h
+/home/gamekoff/Work/game_design/classifier/i_class_classifier.h
 i_type_classifier.h
-/home/gamekoff/Work/mygame/sources/classifier/i_type_classifier.h
+/home/gamekoff/Work/game_design/classifier/i_type_classifier.h
 i_material_classifier.h
-/home/gamekoff/Work/mygame/sources/classifier/i_material_classifier.h
+/home/gamekoff/Work/game_design/classifier/i_material_classifier.h
 i_property_classifier.h
-/home/gamekoff/Work/mygame/sources/classifier/i_property_classifier.h
+/home/gamekoff/Work/game_design/classifier/i_property_classifier.h
 
-/home/gamekoff/Work/mygame/sources/classifier/i_material_classifier.h
+/home/gamekoff/Work/game_design/classifier/i_material_classifier.h
 
-/home/gamekoff/Work/mygame/sources/classifier/i_property_classifier.h
+/home/gamekoff/Work/game_design/classifier/i_property_classifier.h
 
-/home/gamekoff/Work/mygame/sources/classifier/i_type_classifier.h
+/home/gamekoff/Work/game_design/classifier/i_type_classifier.h
 
-/home/gamekoff/Work/mygame/sources/main.cpp
+/home/gamekoff/Work/game_design/main.cpp
 iostream
 -
 human_classifier.h
-/home/gamekoff/Work/mygame/sources/human_classifier.h
+/home/gamekoff/Work/game_design/human_classifier.h
 armor_classifier.h
-/home/gamekoff/Work/mygame/sources/armor_classifier.h
+/home/gamekoff/Work/game_design/armor_classifier.h
 
 classifier/armor_classifier.h
 i_classifier.h

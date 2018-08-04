@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gamekoff/Work/mygame/sources
+CMAKE_SOURCE_DIR = /home/gamekoff/Work/game_design
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gamekoff/Work/mygame/sources
+CMAKE_BINARY_DIR = /home/gamekoff/Work/game_design
 
 # Include any dependencies generated for this target.
 include CMakeFiles/my_game.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/my_game.dir/flags.make
 
 CMakeFiles/my_game.dir/main.cpp.o: CMakeFiles/my_game.dir/flags.make
 CMakeFiles/my_game.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gamekoff/Work/mygame/sources/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/my_game.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_game.dir/main.cpp.o -c /home/gamekoff/Work/mygame/sources/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gamekoff/Work/game_design/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/my_game.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_game.dir/main.cpp.o -c /home/gamekoff/Work/game_design/main.cpp
 
 CMakeFiles/my_game.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_game.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gamekoff/Work/mygame/sources/main.cpp > CMakeFiles/my_game.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gamekoff/Work/game_design/main.cpp > CMakeFiles/my_game.dir/main.cpp.i
 
 CMakeFiles/my_game.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_game.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gamekoff/Work/mygame/sources/main.cpp -o CMakeFiles/my_game.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gamekoff/Work/game_design/main.cpp -o CMakeFiles/my_game.dir/main.cpp.s
 
 CMakeFiles/my_game.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/my_game.dir/main.cpp.o.provides.build: CMakeFiles/my_game.dir/main.cp
 
 CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.o: CMakeFiles/my_game.dir/flags.make
 CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.o: classifier/armor_classifier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gamekoff/Work/mygame/sources/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.o -c /home/gamekoff/Work/mygame/sources/classifier/armor_classifier.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gamekoff/Work/game_design/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.o -c /home/gamekoff/Work/game_design/classifier/armor_classifier.cpp
 
 CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gamekoff/Work/mygame/sources/classifier/armor_classifier.cpp > CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gamekoff/Work/game_design/classifier/armor_classifier.cpp > CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.i
 
 CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gamekoff/Work/mygame/sources/classifier/armor_classifier.cpp -o CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gamekoff/Work/game_design/classifier/armor_classifier.cpp -o CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.s
 
 CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/my_game.dir/classifier/human_classifier.cpp.o: CMakeFiles/my_game.dir/flags.make
 CMakeFiles/my_game.dir/classifier/human_classifier.cpp.o: classifier/human_classifier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gamekoff/Work/mygame/sources/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/my_game.dir/classifier/human_classifier.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_game.dir/classifier/human_classifier.cpp.o -c /home/gamekoff/Work/mygame/sources/classifier/human_classifier.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gamekoff/Work/game_design/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/my_game.dir/classifier/human_classifier.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_game.dir/classifier/human_classifier.cpp.o -c /home/gamekoff/Work/game_design/classifier/human_classifier.cpp
 
 CMakeFiles/my_game.dir/classifier/human_classifier.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_game.dir/classifier/human_classifier.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gamekoff/Work/mygame/sources/classifier/human_classifier.cpp > CMakeFiles/my_game.dir/classifier/human_classifier.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gamekoff/Work/game_design/classifier/human_classifier.cpp > CMakeFiles/my_game.dir/classifier/human_classifier.cpp.i
 
 CMakeFiles/my_game.dir/classifier/human_classifier.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_game.dir/classifier/human_classifier.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gamekoff/Work/mygame/sources/classifier/human_classifier.cpp -o CMakeFiles/my_game.dir/classifier/human_classifier.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gamekoff/Work/game_design/classifier/human_classifier.cpp -o CMakeFiles/my_game.dir/classifier/human_classifier.cpp.s
 
 CMakeFiles/my_game.dir/classifier/human_classifier.cpp.o.requires:
 
@@ -143,7 +143,7 @@ my_game: CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.o
 my_game: CMakeFiles/my_game.dir/classifier/human_classifier.cpp.o
 my_game: CMakeFiles/my_game.dir/build.make
 my_game: CMakeFiles/my_game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gamekoff/Work/mygame/sources/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable my_game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gamekoff/Work/game_design/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable my_game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/my_game.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -162,6 +162,6 @@ CMakeFiles/my_game.dir/clean:
 .PHONY : CMakeFiles/my_game.dir/clean
 
 CMakeFiles/my_game.dir/depend:
-	cd /home/gamekoff/Work/mygame/sources && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gamekoff/Work/mygame/sources /home/gamekoff/Work/mygame/sources /home/gamekoff/Work/mygame/sources /home/gamekoff/Work/mygame/sources /home/gamekoff/Work/mygame/sources/CMakeFiles/my_game.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gamekoff/Work/game_design && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gamekoff/Work/game_design /home/gamekoff/Work/game_design /home/gamekoff/Work/game_design /home/gamekoff/Work/game_design /home/gamekoff/Work/game_design/CMakeFiles/my_game.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/my_game.dir/depend
 

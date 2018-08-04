@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/gamekoff/Work/mygame/sources/classifier/armor_classifier.cpp" "/home/gamekoff/Work/mygame/sources/CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.o"
-  "/home/gamekoff/Work/mygame/sources/classifier/human_classifier.cpp" "/home/gamekoff/Work/mygame/sources/CMakeFiles/my_game.dir/classifier/human_classifier.cpp.o"
-  "/home/gamekoff/Work/mygame/sources/main.cpp" "/home/gamekoff/Work/mygame/sources/CMakeFiles/my_game.dir/main.cpp.o"
+  "/home/gamekoff/Work/game_design/classifier/armor_classifier.cpp" "/home/gamekoff/Work/game_design/CMakeFiles/my_game.dir/classifier/armor_classifier.cpp.o"
+  "/home/gamekoff/Work/game_design/classifier/human_classifier.cpp" "/home/gamekoff/Work/game_design/CMakeFiles/my_game.dir/classifier/human_classifier.cpp.o"
+  "/home/gamekoff/Work/game_design/main.cpp" "/home/gamekoff/Work/game_design/CMakeFiles/my_game.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

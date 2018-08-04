@@ -1,4 +1,4 @@
-# Install script for directory: /home/gamekoff/Work/mygame/sources
+# Install script for directory: /home/gamekoff/Work/game_design
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/gamekoff/Work/mygame/sources/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/gamekoff/Work/game_design/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
