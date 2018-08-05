@@ -1,5 +1,5 @@
-#ifndef E_CREATURE_CATEGORIES
-#define E_CREATURE_CATEGORIES
+#ifndef E_CREATURE_CATEGORIES_H
+#define E_CREATURE_CATEGORIES_H
 
 
 enum class ECreatureClass {
@@ -23,4 +23,4 @@ enum class EMonsterType {
 };
 
 
-#endif // E_CREATURE_CATEGORIES
+#endif // E_CREATURE_CATEGORIES_H

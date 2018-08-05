@@ -9,6 +9,8 @@
 
 class IClassifier : public IClassClassifier, public ITypeClassifier, public IMaterialClassifier, public IPropertyClassifier {
 public:
+    virtual ~IClassifier() { }
+
     int get_class() const override { return 0; }
     int get_type() const override { return 0; }
     int get_material() const override { return 0; }
@@ -19,7 +21,6 @@ public:
 
 protected:
     IClassifier() : IClassClassifier(), ITypeClassifier(), IMaterialClassifier(), IPropertyClassifier() { }
-    virtual ~IClassifier() { }
 
 private:
     IClassifier(const IClassifier&);

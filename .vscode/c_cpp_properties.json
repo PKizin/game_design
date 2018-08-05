@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/classifier/inc"
+                "${workspaceFolder}/classifier/inc",
+                "${workspaceFolder}/params/inc"
             ],
             "defines": [
                 "_DEBUG",

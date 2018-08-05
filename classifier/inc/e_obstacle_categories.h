@@ -1,5 +1,5 @@
-#ifndef E_OBSTACLE_CATEGORIES
-#define E_OBSTACLE_CATEGORIES
+#ifndef E_OBSTACLE_CATEGORIES_H
+#define E_OBSTACLE_CATEGORIES_H
 
 
 enum class EObstacleClass {
@@ -37,4 +37,4 @@ enum class ETreeType {
 };
 
 
-#endif // E_OBSTACLE_CATEGORIES
+#endif // E_OBSTACLE_CATEGORIES_H

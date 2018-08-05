@@ -2,5 +2,17 @@
     "files.associations": {
         "ostream": "cpp"
     },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.gitignore": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/CMakeFiles/": true,
+        "**/CMakeCache.txt": true,
+        "**/cmake_install.cmake": true,
+        "**/Makefile": true,
+    },
     "C_Cpp.errorSquiggles": "Disabled"
 }

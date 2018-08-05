@@ -5,14 +5,13 @@ project(my_game)
 
 file(GLOB SOURCES
     *.cpp
-    *.h
-    classifier/inc/*.h
     classifier/src/*.cpp
+    params/src/*.cpp
 )
 
 include_directories(
     classifier/inc
-    classifier/src
+    params/inc
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})

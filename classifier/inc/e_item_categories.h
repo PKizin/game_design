@@ -1,5 +1,5 @@
-#ifndef E_ITEM_CATEGORIES
-#define E_ITEM_CATEGORIES
+#ifndef E_ITEM_CATEGORIES_H
+#define E_ITEM_CATEGORIES_H
 
 
 enum class EItemClass {
@@ -82,4 +82,4 @@ enum class EPotionProperty1 {
 };
 
 
-#endif // E_ITEM_CATEGORIES
+#endif // E_ITEM_CATEGORIES_H
