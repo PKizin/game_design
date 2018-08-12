@@ -7,11 +7,14 @@ file(GLOB SOURCES
     *.cpp
     classifier/src/*.cpp
     params/src/*.cpp
+    item/src/*.cpp
 )
 
 include_directories(
     classifier/inc
     params/inc
+    object
+    item/inc
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})

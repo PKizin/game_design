@@ -14,7 +14,12 @@ enum class EMainParams {
 enum class ELifeParams {
     _hp,
     _mp,
-    _stamina_pts
+    _stamina_pts,
+    _phys_protection,
+    _mag_protection,
+    _max_hp,
+    _max_mp,
+    _max_stamina_pts
 };
 
 enum class EExpParams {
@@ -25,14 +30,15 @@ enum class EExpParams {
 
 enum class EMoveParams {
     _move_speed,
-    _cur_weight,
+    _weight,
     _max_weight
 };
 
 enum class EHitParams {
     _atk_speed,
     _damage,
-    _protection
+    _durability,
+    _max_durability
 };
 
 enum class EPosParams {
@@ -55,12 +61,17 @@ const EMainParams EMainParam[] = {
 const ELifeParams ELifeParam[] = {
     ELifeParams::_hp, 
     ELifeParams::_mp, 
-    ELifeParams::_stamina_pts
+    ELifeParams::_stamina_pts,
+    ELifeParams::_phys_protection,
+    ELifeParams::_mag_protection,
+    ELifeParams::_max_hp,
+    ELifeParams::_max_mp,
+    ELifeParams::_max_stamina_pts
 };
 
 const EMoveParams EMoveParam[] = {
     EMoveParams::_move_speed, 
-    EMoveParams::_cur_weight, 
+    EMoveParams::_weight, 
     EMoveParams::_max_weight
 };
 
@@ -73,7 +84,8 @@ const EExpParams EExpParam[] = {
 const EHitParams EHitParam[] = {
     EHitParams::_atk_speed, 
     EHitParams::_damage, 
-    EHitParams::_protection
+    EHitParams::_durability,
+    EHitParams::_max_durability
 };
 
 const EPosParams EPosParam[] = {

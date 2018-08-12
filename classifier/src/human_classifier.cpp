@@ -5,7 +5,15 @@ HumanClassifier::HumanClassifier() :
     IClassifier(),
     _class( ECreatureClass::_human ),
     _type( EHumanType::_none )
-{ }
+{
+}
+
+HumanClassifier::HumanClassifier(const HumanClassifier& other) :
+    IClassifier( other ),
+    _class( other._class ),
+    _type( other._type )
+{
+}
 
 
 int HumanClassifier::get_class() const {
@@ -21,3 +29,9 @@ void HumanClassifier::set_type(int val) {
     _type = static_cast< EHumanType >(val);
 }
 
+
+HumanClassifier& HumanClassifier::operator=(const HumanClassifier& other) {
+    _class = other._class;
+    _type = other._type;
+    return *this;
+}

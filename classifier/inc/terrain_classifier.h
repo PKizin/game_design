@@ -8,16 +8,16 @@
 class TerrainClassifier : public IClassifier {
 public:
     TerrainClassifier();
+    TerrainClassifier(const TerrainClassifier&);
     virtual ~TerrainClassifier() { }
 
     int get_class() const override;
     int get_type() const override;
     void set_type(int) override;
 
-private:
-    TerrainClassifier(const TerrainClassifier&);
     TerrainClassifier& operator=(const TerrainClassifier&);
 
+private:
     EObstacleClass _class;
     ETerrainType _type;
 };

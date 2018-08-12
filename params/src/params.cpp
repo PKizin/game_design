@@ -5,45 +5,22 @@ Params::Params() :
     IParams()
 {
     for (const auto& param : EMainParam) {
-        _main_params.at(param) = 0.0;
+        _main_params[param] = 0.0;
     }
     for (const auto& param : ELifeParam) {
-        _life_params.at(param) = 0.0;
+        _life_params[param] = 0.0;
     }
     for (const auto& param : EMoveParam) {
-        _move_params.at(param) = 0.0;
+        _move_params[param] = 0.0;
     }
     for (const auto& param : EExpParam) {
-        _exp_params.at(param) = 0.0;
+        _exp_params[param] = 0.0;
     }
     for (const auto& param : EHitParam) {
-        _hit_params.at(param) = 0.0;
+        _hit_params[param] = 0.0;
     }
     for (const auto& param : EPosParam) {
-        _pos_params.at(param) = 0.0;
-    }
-}
-
-Params::Params(const Params& other) :
-    IParams(other)
-{
-    for (const auto& param : EMainParam) {
-        _main_params.at(param) = other._main_params.at(param);
-    }
-    for (const auto& param : ELifeParam) {
-        _life_params.at(param) = other._life_params.at(param);
-    }
-    for (const auto& param : EMoveParam) {
-        _move_params.at(param) = other._move_params.at(param);
-    }
-    for (const auto& param : EExpParam) {
-        _exp_params.at(param) = other._exp_params.at(param);
-    }
-    for (const auto& param : EHitParam) {
-        _hit_params.at(param) = other._hit_params.at(param);
-    }
-    for (const auto& param : EPosParam) {
-        _pos_params.at(param) = other._pos_params.at(param);
+        _pos_params[param] = 0.0;
     }
 }
 
@@ -97,6 +74,10 @@ void Params::set_pos_param(EPosParams param, float value) {
     _pos_params.at(param) = value;
 }
 
+
+IParams& Params::operator=(const IParams& other) {
+    return operator=( dynamic_cast< Params& >(const_cast< IParams& >(other)) );
+}
 
 Params& Params::operator=(const Params& other) {
     for (const auto& param : EMainParam) {

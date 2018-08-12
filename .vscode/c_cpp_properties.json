@@ -5,7 +5,9 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/classifier/inc",
-                "${workspaceFolder}/params/inc"
+                "${workspaceFolder}/params/inc",
+                "${workspaceFolder}/object",
+                "${workspaceFolder}/item/inc"
             ],
             "defines": [
                 "_DEBUG",

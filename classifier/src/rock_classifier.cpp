@@ -5,7 +5,15 @@ RockClassifier::RockClassifier() :
     IClassifier(),
     _class( EObstacleClass::_rock ),
     _type( ERockType::_none )
-{ }
+{
+}
+
+RockClassifier::RockClassifier(const RockClassifier& other) :
+    IClassifier( other ),
+    _class( other._class ),
+    _type( other._type )
+{
+}
 
 
 int RockClassifier::get_class() const {
@@ -21,3 +29,9 @@ void RockClassifier::set_type(int type) {
     _type = static_cast< ERockType >(type);
 }
 
+
+RockClassifier& RockClassifier::operator=(const RockClassifier& other) {
+    _class = other._class;
+    _type = other._type;
+    return *this;
+}

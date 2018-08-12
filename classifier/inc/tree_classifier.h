@@ -8,16 +8,16 @@
 class TreeClassifier : public IClassifier {
 public:
     TreeClassifier();
+    TreeClassifier(const TreeClassifier&);
     virtual ~TreeClassifier() { }
 
     int get_class() const override;
     int get_type() const override;
     void set_type(int) override;
 
-private:
-    TreeClassifier(const TreeClassifier&);
     TreeClassifier& operator=(const TreeClassifier&);
-
+    
+private:
     EObstacleClass _class;
     ETreeType _type;
 };

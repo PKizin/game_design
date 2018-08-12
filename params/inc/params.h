@@ -8,7 +8,6 @@
 class Params : public IParams {
 public:
     Params();
-    Params(const Params&);
     virtual ~Params() { }
 
     float get_main_param(EMainParams) const override;
@@ -25,6 +24,7 @@ public:
     void set_hit_param(EHitParams, float) override;
     void set_pos_param(EPosParams, float) override;
 
+    virtual IParams& operator=(const IParams&) override;
     Params& operator=(const Params&);
     Params& operator+=(const Params&);
 

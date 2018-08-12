@@ -11,6 +11,7 @@
 
 class IParams : public IMainParams, public ILifeParams, public IMoveParams, public IExpParams, public IHitParams, public IPosParams {
 public:
+    IParams() : IMainParams(), ILifeParams(), IMoveParams(), IExpParams(), IHitParams(), IPosParams() { }
     virtual ~IParams() { }
 
     float get_main_param(EMainParams) const override { return 0.0; }
@@ -27,8 +28,7 @@ public:
     void set_hit_param(EHitParams, float) override { }
     void set_pos_param(EPosParams, float) override { }
 
-protected:
-    IParams() : IMainParams(), ILifeParams(), IMoveParams(), IExpParams(), IHitParams(), IPosParams() { }
+    virtual IParams& operator=(const IParams&) { return *this; }
 };
 
 

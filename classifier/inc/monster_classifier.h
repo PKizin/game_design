@@ -8,16 +8,16 @@
 class MonsterClassifier : public IClassifier {
 public:
     MonsterClassifier();
+    MonsterClassifier(const MonsterClassifier&);
     virtual ~MonsterClassifier() { }
 
     int get_class() const override;
     int get_type() const override;
     void set_type(int) override;
 
-private:
-    MonsterClassifier(const MonsterClassifier&);
     MonsterClassifier& operator=(const MonsterClassifier&);
 
+private:
     ECreatureClass _class;
     EMonsterType _type;
 };

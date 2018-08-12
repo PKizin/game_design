@@ -8,6 +8,7 @@
 class WeaponClassifier : public IClassifier {
 public:
     WeaponClassifier();
+    WeaponClassifier(const WeaponClassifier&);
     virtual ~WeaponClassifier() { }
 
     int get_class() const override;
@@ -18,10 +19,10 @@ public:
     void set_material(int) override;
     void set_property1(int) override;
 
-private:
-    WeaponClassifier(const WeaponClassifier&);
+    IClassifier& operator=(const IClassifier&) override;
     WeaponClassifier& operator=(const WeaponClassifier&);
 
+private:
     EItemClass _class;
     EWeaponType _type;
     EWeaponMaterial _material;

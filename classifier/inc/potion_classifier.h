@@ -8,6 +8,7 @@
 class PotionClassifier : public IClassifier {
 public:
     PotionClassifier();
+    PotionClassifier(const PotionClassifier&);
     virtual ~PotionClassifier() { }
 
     int get_class() const override;
@@ -16,10 +17,9 @@ public:
     void set_type(int) override;
     void set_property1(int) override;
 
-private:
-    PotionClassifier(const PotionClassifier&);
     PotionClassifier& operator=(const PotionClassifier&);
 
+private:
     EItemClass _class;
     EPotionType _type;
     EPotionProperty1 _property1;

@@ -8,16 +8,16 @@
 class RockClassifier : public IClassifier {
 public:
     RockClassifier();
+    RockClassifier(const RockClassifier&);
     virtual ~RockClassifier() { }
 
     int get_class() const override;
     int get_type() const override;
     void set_type(int) override;
 
-private:
-    RockClassifier(const RockClassifier&);
     RockClassifier& operator=(const RockClassifier&);
 
+private:
     EObstacleClass _class;
     ERockType _type;
 };

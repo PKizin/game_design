@@ -9,10 +9,6 @@ public:
 protected:
     IClassClassifier() { }
     virtual ~IClassClassifier() { }
-
-private:
-    IClassClassifier(const IClassClassifier&);
-    IClassClassifier& operator=(const IClassClassifier&);
 };
 
 #endif // I_CLASS_CLASSIFIER_H

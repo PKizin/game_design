@@ -8,6 +8,7 @@
 class ArmorClassifier : public IClassifier {
 public:
     ArmorClassifier();
+    ArmorClassifier(const ArmorClassifier&);
     virtual ~ArmorClassifier() { }
 
     int get_class() const override;
@@ -16,10 +17,9 @@ public:
     void set_type(int) override;
     void set_material(int) override;
 
-private:
-    ArmorClassifier(const ArmorClassifier&);
     ArmorClassifier& operator=(const ArmorClassifier&);
 
+private:
     EItemClass _class;
     EArmorType _type;
     EArmorMaterial _material;

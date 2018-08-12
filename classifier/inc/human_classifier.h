@@ -8,16 +8,16 @@
 class HumanClassifier : public IClassifier  {
 public:
     HumanClassifier();
+    HumanClassifier(const HumanClassifier&);
     virtual ~HumanClassifier() { };
 
     int get_class() const override;
     int get_type() const override;
     void set_type(int) override;
 
-private:
-    HumanClassifier(const HumanClassifier&);
     HumanClassifier& operator=(const HumanClassifier&);
 
+private:
     ECreatureClass _class;
     EHumanType _type;
 };

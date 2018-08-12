@@ -7,7 +7,17 @@ WeaponClassifier::WeaponClassifier() :
     _type( EWeaponType::_none ),
     _material( EWeaponMaterial::_none ),
     _property1( EWeaponProperty1::_none )
-{ }
+{
+}
+
+WeaponClassifier::WeaponClassifier(const WeaponClassifier& other) :
+    IClassifier( other ),
+    _class( other._class ),
+    _type( other._type ),
+    _material( other._material ),
+    _property1( other._property1 )
+{
+}
 
 
 int WeaponClassifier::get_class() const {
@@ -39,3 +49,15 @@ void WeaponClassifier::set_property1(int property1) {
     _property1 = static_cast< EWeaponProperty1 >(property1);
 }
 
+
+IClassifier& WeaponClassifier::operator=(const IClassifier& other) {
+    return operator=( dynamic_cast< WeaponClassifier& >(const_cast< IClassifier& >(other)) );
+}
+
+WeaponClassifier& WeaponClassifier::operator=(const WeaponClassifier& other) {
+    _class = other._class;
+    _type = other._type;
+    _material = other._material;
+    _property1 = other._property1;
+    return *this;
+}

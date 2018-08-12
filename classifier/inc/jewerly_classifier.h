@@ -8,6 +8,7 @@
 class JewerlyClassifier : public IClassifier {
 public:
     JewerlyClassifier();
+    JewerlyClassifier(const JewerlyClassifier&);
     virtual ~JewerlyClassifier() { }
 
     int get_class() const override;
@@ -16,10 +17,9 @@ public:
     void set_type(int) override;
     void set_material(int) override;
 
-private:
-    JewerlyClassifier(const JewerlyClassifier&);
     JewerlyClassifier& operator=(const JewerlyClassifier&);
 
+private:
     EItemClass _class;
     EJewerlyType _type;
     EJewerlyMaterial _material;

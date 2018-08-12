@@ -10,10 +10,6 @@ public:
 protected:
     IMaterialClassifier() { }
     virtual ~IMaterialClassifier() { }
-
-private:
-    IMaterialClassifier(const IMaterialClassifier&);
-    IMaterialClassifier& operator=(const IMaterialClassifier&);
 };
 
 #endif // I_MATERIAL_CLASSIFIER_H

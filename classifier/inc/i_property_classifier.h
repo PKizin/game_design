@@ -10,10 +10,6 @@ public:
 protected:
     IPropertyClassifier() { }
     virtual ~IPropertyClassifier() { }
-
-private:
-    IPropertyClassifier(const IPropertyClassifier&);
-    IPropertyClassifier& operator=(const IPropertyClassifier&);
 };
 
 #endif // I_PROPERTY_CLASSIFIER_H
