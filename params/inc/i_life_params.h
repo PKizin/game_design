@@ -12,10 +12,6 @@ public:
 protected:
     ILifeParams() { }
     virtual ~ILifeParams() { }
-
-private:
-    ILifeParams(const ILifeParams&);
-    ILifeParams& operator=(const ILifeParams&);
 };
 
 

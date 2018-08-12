@@ -12,10 +12,6 @@ public:
 protected:
     IHitParams() { }
     virtual ~IHitParams() { }
-
-private:
-    IHitParams(const IHitParams&);
-    IHitParams& operator=(const IHitParams&);
 };
 
 

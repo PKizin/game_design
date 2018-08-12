@@ -12,10 +12,6 @@ public:
 protected:
     IPosParams() { }
     virtual ~IPosParams() { }
-
-private:
-    IPosParams(const IPosParams&);
-    IPosParams& operator=(const IPosParams&);
 };
 
 

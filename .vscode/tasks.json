@@ -6,7 +6,7 @@
         {
             "label": "build by cmake",
             "type": "shell",
-            "command": "cmake -G \"Unix Makefiles\" -DCMAKE_BUILD_TYPE=Debug && make -j 5",
+            "command": "clear && cmake -G \"Unix Makefiles\" -DCMAKE_BUILD_TYPE=Debug && make -j 5",
             "group": {
                 "kind": "build",
                 "isDefault": true

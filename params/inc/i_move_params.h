@@ -12,10 +12,6 @@ public:
 protected:
     IMoveParams() { }
     virtual ~IMoveParams() { }
-
-private:
-    IMoveParams(const IMoveParams&);
-    IMoveParams& operator=(const IMoveParams&);
 };
 
 

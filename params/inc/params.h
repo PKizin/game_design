@@ -8,6 +8,7 @@
 class Params : public IParams {
 public:
     Params();
+    Params(const Params&);
     virtual ~Params() { }
 
     float get_main_param(EMainParams) const override;
@@ -24,12 +25,10 @@ public:
     void set_hit_param(EHitParams, float) override;
     void set_pos_param(EPosParams, float) override;
 
-    Params& operator+=(const Params&) override;
+    Params& operator=(const Params&);
+    Params& operator+=(const Params&);
 
 private:
-    Params(const Params&);
-    Params& operator=(const Params&);
-
     std::map< EMainParams, float > _main_params;
     std::map< ELifeParams, float > _life_params;
     std::map< EMoveParams, float > _move_params;

@@ -12,10 +12,6 @@ public:
 protected:
     IExpParams() { }
     virtual ~IExpParams() { }
-
-private:
-    IExpParams(const IExpParams&);
-    IExpParams& operator=(const IExpParams&);
 };
 
 

@@ -6,16 +6,12 @@
 
 class IMainParams {
 public:
-    virtual float get_main_param(EMainParam) const = 0;
-    virtual void set_main_param(EMainParam, float) = 0;
+    virtual float get_main_param(EMainParams) const = 0;
+    virtual void set_main_param(EMainParams, float) = 0;
 
 protected:
     IMainParams() { }
     virtual ~IMainParams() { }
-
-private:
-    IMainParams(const IMainParams&);
-    IMainParams& operator=(const IMainParams&);
 };
 
 

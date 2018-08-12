@@ -27,14 +27,8 @@ public:
     void set_hit_param(EHitParams, float) override { }
     void set_pos_param(EPosParams, float) override { }
 
-    virtual IParams& operator+=(const IParams&) { }
-
 protected:
-    IParams() : IMainParams(), ILifeParams(), IMoveParams, IExpParams, IHitParams, IPosParams { }
-
-private:
-    IParams(const IParams&);
-    IParams& operator=(const IParams&);
+    IParams() : IMainParams(), ILifeParams(), IMoveParams(), IExpParams(), IHitParams(), IPosParams() { }
 };
 
 
