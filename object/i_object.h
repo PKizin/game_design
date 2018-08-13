@@ -9,8 +9,8 @@ class IObject {
 public:
     virtual ~IObject() { }
 
-    virtual IClassifier get_classifier() const = 0;
-    virtual IParams get_params() const = 0;
+    virtual void get_classifier(const IClassifier&) const = 0;
+    virtual void get_params(const IParams&) const = 0;
     virtual void set_classifier(const IClassifier&) = 0;
     virtual void set_params(const IParams&) = 0;
 

@@ -2,50 +2,49 @@
 
 
 Weapon::Weapon(const IClassifier& classifier, const IParams& params, const IParams& requirements) : 
-    IItem()
+    IItem(),
+    _classifier( classifier ),
+    _params( params ),
+    _requirements( requirements )
 {
-    set_classifier(classifier);
-    set_params(params);
-    set_requirements(requirements);
 }
 
 
-IClassifier Weapon::get_classifier() const {
-    return _classifier;
+void Weapon::get_classifier(const IClassifier& classifier) const {
+    IClassifier::copy< WeaponClassifier >(_classifier, classifier);
 }
 
-IParams Weapon::get_params() const {
-    return _params;
+void Weapon::get_params(const IParams& params) const {
+    IParams::copy< Params >(_params, params);
 }
 
-IParams Weapon::get_requirements() const {
-    return _requirements;
+void Weapon::get_requirements(const IParams& requirements) const {
+    IParams::copy< Params >(_requirements, requirements);
 }
 
 
 void Weapon::set_classifier(const IClassifier& classifier) {
-    auto& cla = dynamic_cast< WeaponClassifier& >(const_cast< IClassifier& >(classifier));
-    _classifier = cla;
+    IClassifier::copy< WeaponClassifier >(classifier, _classifier);
 }
 
 void Weapon::set_params(const IParams& params) {
-    auto& par = dynamic_cast< Params& >(const_cast< IParams& >(params));
-    _params = par;
+    IParams::copy< Params >(params, _params);
 }
 
 void Weapon::set_requirements(const IParams& requirements) {
-    auto& req = dynamic_cast< Params& >(const_cast< IParams& >(requirements));
-    _requirements = req;
+    IParams::copy< Params >(requirements, _requirements);
 }
 
 
 void Weapon::broke(float damage) {
-    float durability = _params.get_hit_param(EHitParams::_durability);
-    _params.set_hit_param(EHitParams::_durability, durability - damage);
+    IParams& params = const_cast< IParams& >(_params);
+    float durability = params.get_hit_param(EHitParams::_durability);
+    params.set_hit_param(EHitParams::_durability, durability - damage);
 }
 
 void Weapon::repair() {
-    float max_durability = _params.get_hit_param(EHitParams::_max_durability);
-    _params.set_hit_param(EHitParams::_durability, max_durability);
+    IParams& params = const_cast< IParams& >(_params);
+    float max_durability = params.get_hit_param(EHitParams::_max_durability);
+    params.set_hit_param(EHitParams::_durability, max_durability);
 }
 

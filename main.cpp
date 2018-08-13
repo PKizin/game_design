@@ -5,10 +5,12 @@
 using namespace std;
 
 int main() {
-    IClassifier* classifier = new WeaponClassifier();
-    IParams* params = new Params();
-    IParams* requirements = params;
-    IItem* weapon = new Weapon(*classifier, *params, *requirements);
-    cout << "1" << endl;
+    const IClassifier& classifier = WeaponClassifier();
+    const IParams& params = Params();
+    const IParams& requirements = params;
+    const IItem& weapon = Weapon(classifier, params, requirements);
+    const IClassifier& cla = WeaponClassifier();
+    weapon.get_classifier(cla);
+    cout << cla.get_class() << endl;
     return 0;
 }
