@@ -37,7 +37,7 @@ public:
         try {
             T& par1 = dynamic_cast< T& >(const_cast< IParams& >(source));
             T& par2 = dynamic_cast< T& >(const_cast< IParams& >(destination));
-            par1 = par2; 
+            par2 = par1; 
         }
         catch (std::bad_cast& bc) {
             std::cerr << "bad cast catch: " << bc.what() << std::endl;

@@ -1,4 +1,5 @@
 #include "weapon_classifier.h"
+#include <iostream>
 
 
 WeaponClassifier::WeaponClassifier() :
@@ -7,6 +8,15 @@ WeaponClassifier::WeaponClassifier() :
     _type( EWeaponType::_none ),
     _material( EWeaponMaterial::_none ),
     _property1( EWeaponProperty1::_none )
+{
+}
+
+WeaponClassifier::WeaponClassifier(EWeaponType type, EWeaponMaterial material, EWeaponProperty1 property1) :
+    IClassifier(),
+    _class( EItemClass::_weapon ),
+    _type( type ),
+    _material( material ),
+    _property1( property1 )
 {
 }
 
@@ -47,6 +57,15 @@ void WeaponClassifier::set_material(int material) {
 
 void WeaponClassifier::set_property1(int property1) {
     _property1 = static_cast< EWeaponProperty1 >(property1);
+}
+
+
+void WeaponClassifier::print() const {
+    std::cout << "This " 
+        << EItemClassTags[ static_cast<int>(_class) ] << " is " 
+        << EWeaponPropTags[ static_cast<int>(_property1) ] << " " 
+        << EWeaponTypeTags[ static_cast<int>(_type) ] << " made by " 
+        << EWeaponMatTags[ static_cast<int>(_material) ];
 }
 
 

@@ -5,12 +5,12 @@
 using namespace std;
 
 int main() {
-    const IClassifier& classifier = WeaponClassifier();
+    const IClassifier& classifier = WeaponClassifier(EWeaponType::_staff, EWeaponMaterial::_wood, EWeaponProperty1::_two_handed);
     const IParams& params = Params();
     const IParams& requirements = params;
     const IItem& weapon = Weapon(classifier, params, requirements);
     const IClassifier& cla = WeaponClassifier();
     weapon.get_classifier(cla);
-    cout << cla.get_class() << endl;
+    cla.print();
     return 0;
 }

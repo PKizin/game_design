@@ -1,6 +1,8 @@
 #ifndef E_ITEM_CATEGORIES_H
 #define E_ITEM_CATEGORIES_H
 
+#include <string>
+
 
 enum class EItemClass {
     _none,
@@ -80,6 +82,12 @@ enum class EPotionProperty1 {
     _medium,
     _big
 };
+
+
+const std::string EItemClassTags[] = { "none", "weapon", "armor", "jewerly", "potion" };
+const std::string EWeaponTypeTags[] = { "none", "stick", "dagger", "sword", "staff" };
+const std::string EWeaponMatTags[] = { "none", "wood", "steel", "glass" };
+const std::string EWeaponPropTags[] = { "none", "one-handed", "two-handed" };
 
 
 #endif // E_ITEM_CATEGORIES_H

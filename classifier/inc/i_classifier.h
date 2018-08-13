@@ -30,12 +30,14 @@ public:
         try {
             T& par1 = dynamic_cast< T& >(const_cast< IClassifier& >(source));
             T& par2 = dynamic_cast< T& >(const_cast< IClassifier& >(destination));
-            par1 = par2; 
+            par2 = par1; 
         }
         catch (std::bad_cast& bc) {
             std::cerr << "bad cast catch: " << bc.what() << std::endl;
         }
     }
+
+    virtual void print() const { }
 
     virtual IClassifier& operator=(const IClassifier&) { return *this; }
 };
