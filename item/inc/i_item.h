@@ -9,9 +9,9 @@ class IItem : public IObject, public IDurableItem {
 public:
     virtual ~IItem() { }
 
-    virtual void get_classifier(const IClassifier&) const = 0;
-    virtual void get_params(const IParams&) const = 0;
-    virtual void get_requirements(const IParams&) const = 0;
+    virtual void get_classifier(IClassifier&) const = 0;
+    virtual void get_params(IParams&) const = 0;
+    virtual void get_requirements(IParams&) const = 0;
 
     virtual void set_classifier(const IClassifier&) = 0;
     virtual void set_params(const IParams&) = 0;
@@ -21,7 +21,7 @@ public:
     virtual void repair() = 0;
 
 protected:
-    IItem() : IObject(), IDurableItem() { }
+    IItem() { }
 
 private:
     IItem(const IItem&);

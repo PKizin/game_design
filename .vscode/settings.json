@@ -48,5 +48,6 @@
         "**/cmake_install.cmake": true,
         "**/Makefile": true,
     },
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "cmake.configureOnOpen": false
 }

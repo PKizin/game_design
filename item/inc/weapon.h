@@ -11,9 +11,9 @@ public:
     Weapon(const IClassifier&, const IParams&, const IParams&);
     virtual ~Weapon() { }
 
-    void get_classifier(const IClassifier&) const override;
-    void get_params(const IParams&) const override;
-    void get_requirements(const IParams&) const override;
+    void get_classifier(IClassifier&) const override;
+    void get_params(IParams&) const override;
+    void get_requirements(IParams&) const override;
 
     void set_classifier(const IClassifier&) override;
     void set_params(const IParams&) override;
@@ -25,9 +25,9 @@ public:
 private:
     Weapon();
 
-    const IClassifier& _classifier;
-    const IParams& _params;
-    const IParams& _requirements;
+    WeaponClassifier _classifier;
+    Params _params;
+    Params _requirements;
 };
 
 

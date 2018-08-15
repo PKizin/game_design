@@ -14,7 +14,6 @@
 
 class IParams : public IMainParams, public ILifeParams, public IMoveParams, public IExpParams, public IHitParams, public IPosParams {
 public:
-    IParams() : IMainParams(), ILifeParams(), IMoveParams(), IExpParams(), IHitParams(), IPosParams() { }
     virtual ~IParams() { }
 
     float get_main_param(EMainParams) const override { return 0.0; }
@@ -31,20 +30,11 @@ public:
     void set_hit_param(EHitParams, float) override { }
     void set_pos_param(EPosParams, float) override { }
 
-    // downcast IParams
-    template<class T>
-    static void copy(const IParams& source, const IParams& destination) {
-        try {
-            T& par1 = dynamic_cast< T& >(const_cast< IParams& >(source));
-            T& par2 = dynamic_cast< T& >(const_cast< IParams& >(destination));
-            par2 = par1; 
-        }
-        catch (std::bad_cast& bc) {
-            std::cerr << "bad cast catch: " << bc.what() << std::endl;
-        }
-    }
-
     virtual IParams& operator=(const IParams&) { return *this; }
+
+protected:
+    IParams() { }
+    IParams(const IParams&) { }
 };
 
 

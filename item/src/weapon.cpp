@@ -10,41 +10,39 @@ Weapon::Weapon(const IClassifier& classifier, const IParams& params, const IPara
 }
 
 
-void Weapon::get_classifier(const IClassifier& classifier) const {
-    IClassifier::copy< WeaponClassifier >(_classifier, classifier);
+void Weapon::get_classifier(IClassifier& classifier) const {
+    classifier = WeaponClassifier( _classifier );
 }
 
-void Weapon::get_params(const IParams& params) const {
-    IParams::copy< Params >(_params, params);
+void Weapon::get_params(IParams& params) const {
+    params = Params( _params );
 }
 
-void Weapon::get_requirements(const IParams& requirements) const {
-    IParams::copy< Params >(_requirements, requirements);
+void Weapon::get_requirements(IParams& requirements) const {
+    requirements = Params( _requirements );
 }
 
 
 void Weapon::set_classifier(const IClassifier& classifier) {
-    IClassifier::copy< WeaponClassifier >(classifier, _classifier);
+    _classifier = WeaponClassifier( classifier );
 }
 
 void Weapon::set_params(const IParams& params) {
-    IParams::copy< Params >(params, _params);
+    _params = Params( params );
 }
 
 void Weapon::set_requirements(const IParams& requirements) {
-    IParams::copy< Params >(requirements, _requirements);
+    _requirements = Params( requirements );
 }
 
 
 void Weapon::broke(float damage) {
-    IParams& params = const_cast< IParams& >(_params);
-    float durability = params.get_hit_param(EHitParams::_durability);
-    params.set_hit_param(EHitParams::_durability, durability - damage);
+    float durability = _params.get_hit_param(EHitParams::_durability);
+    _params.set_hit_param(EHitParams::_durability, durability - damage);
 }
 
 void Weapon::repair() {
-    IParams& params = const_cast< IParams& >(_params);
-    float max_durability = params.get_hit_param(EHitParams::_max_durability);
-    params.set_hit_param(EHitParams::_durability, max_durability);
+    float max_durability = _params.get_hit_param(EHitParams::_max_durability);
+    _params.set_hit_param(EHitParams::_durability, max_durability);
 }
 

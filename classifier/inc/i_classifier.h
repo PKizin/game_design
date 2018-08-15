@@ -12,8 +12,6 @@
 
 class IClassifier : public IClassClassifier, public ITypeClassifier, public IMaterialClassifier, public IPropertyClassifier {
 public:
-    IClassifier() : IClassClassifier(), ITypeClassifier(), IMaterialClassifier(), IPropertyClassifier() { }
-    IClassifier(const IClassifier&) : IClassifier() { }
     virtual ~IClassifier() { }
 
     int get_class() const override { return 0; }
@@ -24,22 +22,13 @@ public:
     void set_material(int) override { }
     void set_property1(int) override { }
 
-    // downcast IClassifier
-    template<class T>
-    static void copy(const IClassifier& source, const IClassifier& destination) {
-        try {
-            T& par1 = dynamic_cast< T& >(const_cast< IClassifier& >(source));
-            T& par2 = dynamic_cast< T& >(const_cast< IClassifier& >(destination));
-            par2 = par1; 
-        }
-        catch (std::bad_cast& bc) {
-            std::cerr << "bad cast catch: " << bc.what() << std::endl;
-        }
-    }
-
     virtual void print() const { }
 
     virtual IClassifier& operator=(const IClassifier&) { return *this; }
+
+protected:
+    IClassifier() { }
+    IClassifier(const IClassifier&) { }
 };
 
 

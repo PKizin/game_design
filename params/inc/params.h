@@ -8,6 +8,8 @@
 class Params : public IParams {
 public:
     Params();
+    Params(const Params&);
+    Params(const IParams&);
     virtual ~Params() { }
 
     float get_main_param(EMainParams) const override;

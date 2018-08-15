@@ -10,6 +10,7 @@ public:
     WeaponClassifier();
     WeaponClassifier(EWeaponType type, EWeaponMaterial material, EWeaponProperty1 property1);
     WeaponClassifier(const WeaponClassifier&);
+    WeaponClassifier(const IClassifier&);
     virtual ~WeaponClassifier() { }
 
     int get_class() const override;

@@ -29,6 +29,11 @@ WeaponClassifier::WeaponClassifier(const WeaponClassifier& other) :
 {
 }
 
+WeaponClassifier::WeaponClassifier(const IClassifier& other) :
+    WeaponClassifier( static_cast< const WeaponClassifier& >(other) )
+{
+}
+
 
 int WeaponClassifier::get_class() const {
     return static_cast<int>(_class);
@@ -65,12 +70,12 @@ void WeaponClassifier::print() const {
         << EItemClassTags[ static_cast<int>(_class) ] << " is " 
         << EWeaponPropTags[ static_cast<int>(_property1) ] << " " 
         << EWeaponTypeTags[ static_cast<int>(_type) ] << " made by " 
-        << EWeaponMatTags[ static_cast<int>(_material) ];
+        << EWeaponMatTags[ static_cast<int>(_material) ] << std::endl;
 }
 
 
 IClassifier& WeaponClassifier::operator=(const IClassifier& other) {
-    return operator=( dynamic_cast< WeaponClassifier& >(const_cast< IClassifier& >(other)) );
+    return operator=( static_cast< const WeaponClassifier& >(other) );
 }
 
 WeaponClassifier& WeaponClassifier::operator=(const WeaponClassifier& other) {
