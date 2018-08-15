@@ -1,5 +1,6 @@
 #include <iostream>
 #include "weapon_classifier.h"
+#include "weapon_factory.h"
 #include "weapon.h"
 #include "params.h"
 using namespace std;

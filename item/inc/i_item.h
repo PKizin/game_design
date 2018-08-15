@@ -7,8 +7,6 @@
 
 class IItem : public IObject, public IDurableItem {
 public:
-    virtual ~IItem() { }
-
     virtual void get_classifier(IClassifier&) const = 0;
     virtual void get_params(IParams&) const = 0;
     virtual void get_requirements(IParams&) const = 0;
@@ -22,6 +20,7 @@ public:
 
 protected:
     IItem() { }
+    virtual ~IItem() { }
 
 private:
     IItem(const IItem&);

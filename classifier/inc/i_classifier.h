@@ -12,15 +12,13 @@
 
 class IClassifier : public IClassClassifier, public ITypeClassifier, public IMaterialClassifier, public IPropertyClassifier {
 public:
-    virtual ~IClassifier() { }
-
-    int get_class() const override { return 0; }
-    int get_type() const override { return 0; }
-    int get_material() const override { return 0; }
-    int get_property1() const override { return 0; }
-    void set_type(int) override { }
-    void set_material(int) override { }
-    void set_property1(int) override { }
+    virtual int get_class() const { return 0; }
+    virtual int get_type() const { return 0; }
+    virtual int get_material() const { return 0; }
+    virtual int get_property1() const { return 0; }
+    virtual void set_type(int) { }
+    virtual void set_material(int) { }
+    virtual void set_property1(int) { }
 
     virtual void print() const { }
 
@@ -29,6 +27,7 @@ public:
 protected:
     IClassifier() { }
     IClassifier(const IClassifier&) { }
+    virtual ~IClassifier() { }
 };
 
 

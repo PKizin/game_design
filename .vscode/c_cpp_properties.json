@@ -4,10 +4,11 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
+                "${workspaceFolder}/object",
                 "${workspaceFolder}/classifier/inc",
                 "${workspaceFolder}/params/inc",
-                "${workspaceFolder}/object",
-                "${workspaceFolder}/item/inc"
+                "${workspaceFolder}/item/inc",
+                "${workspaceFolder}/factory/inc"
             ],
             "defines": [
                 "_DEBUG",
@@ -22,7 +23,12 @@
 	{
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/object",
+                "${workspaceFolder}/classifier/inc",
+                "${workspaceFolder}/params/inc",
+                "${workspaceFolder}/item/inc",
+                "${workspaceFolder}/factory/inc"
             ],
             "defines": [
                 "_DEBUG",

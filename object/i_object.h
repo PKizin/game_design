@@ -7,8 +7,6 @@
 
 class IObject {
 public:
-    virtual ~IObject() { }
-
     virtual void get_classifier(IClassifier&) const = 0;
     virtual void get_params(IParams&) const = 0;
     virtual void set_classifier(const IClassifier&) = 0;
@@ -16,6 +14,7 @@ public:
 
 protected:
     IObject() { }
+    virtual ~IObject() { }
 };
 
 

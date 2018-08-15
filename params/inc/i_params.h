@@ -14,27 +14,26 @@
 
 class IParams : public IMainParams, public ILifeParams, public IMoveParams, public IExpParams, public IHitParams, public IPosParams {
 public:
-    virtual ~IParams() { }
+    virtual float get_main_param(EMainParams) const = 0;
+    virtual float get_life_param(ELifeParams) const = 0;
+    virtual float get_move_param(EMoveParams) const = 0;
+    virtual float get_exp_param(EExpParams) const = 0;
+    virtual float get_hit_param(EHitParams) const = 0;
+    virtual float get_pos_param(EPosParams) const = 0;
 
-    float get_main_param(EMainParams) const override { return 0.0; }
-    float get_life_param(ELifeParams) const override { return 0.0; }
-    float get_move_param(EMoveParams) const override { return 0.0; }
-    float get_exp_param(EExpParams) const override { return 0.0; }
-    float get_hit_param(EHitParams) const override { return 0.0; }
-    float get_pos_param(EPosParams) const override { return 0.0; }
-
-    void set_main_param(EMainParams, float) override { }
-    void set_life_param(ELifeParams, float) override { }
-    void set_move_param(EMoveParams, float) override { }
-    void set_exp_param(EExpParams, float) override { }
-    void set_hit_param(EHitParams, float) override { }
-    void set_pos_param(EPosParams, float) override { }
+    virtual void set_main_param(EMainParams, float) = 0;
+    virtual void set_life_param(ELifeParams, float) = 0;
+    virtual void set_move_param(EMoveParams, float) = 0;
+    virtual void set_exp_param(EExpParams, float) = 0;
+    virtual void set_hit_param(EHitParams, float) = 0;
+    virtual void set_pos_param(EPosParams, float) = 0;
 
     virtual IParams& operator=(const IParams&) { return *this; }
 
 protected:
     IParams() { }
     IParams(const IParams&) { }
+    virtual ~IParams() { }
 };
 
 
