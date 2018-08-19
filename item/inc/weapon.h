@@ -15,7 +15,6 @@ public:
     void get_classifier(IClassifier&) const override;
     void get_params(IParams&) const override;
     void get_requirements(IParams&) const override;
-
     void set_classifier(const IClassifier&) override;
     void set_params(const IParams&) override;
     void set_requirements(const IParams&) override;

@@ -8,7 +8,7 @@
 class WeaponClassifier : public IClassifier {
 public:
     WeaponClassifier();
-    WeaponClassifier(EWeaponType type, EWeaponMaterial material, EWeaponProperty1 property1);
+    WeaponClassifier(EWeaponType, EWeaponMaterial, EWeaponProperty1);
     WeaponClassifier(const WeaponClassifier&);
     WeaponClassifier(const IClassifier&);
     virtual ~WeaponClassifier() { }

@@ -43,6 +43,7 @@
         "ratio": "cpp"
     },
     "files.exclude": {
+        "*.exe": true,
         "**/.git": true,
         "**/.gitignore": true,
         "**/.svn": true,

@@ -48,6 +48,10 @@ void Weapon::repair() {
 
 
 void Weapon::print() const {
+    std::cout << "+--------------+\n";
+    std::cout << "|     item     |\n";
+    std::cout << "+--------------+\n";
+    
     _classifier.print();
 
     std::cout << "params:\n";
