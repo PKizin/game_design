@@ -6,7 +6,7 @@
 
 class IParamsFactory {
 public:
-    virtual void build_params(IParams&) = 0;
+    virtual void build_params(IParams&) const = 0;
 
 protected:
     IParamsFactory() { }

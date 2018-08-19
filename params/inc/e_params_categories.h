@@ -1,6 +1,8 @@
 #ifndef E_PARAMS_CATEGORIES_H
 #define E_PARAMS_CATEGORIES_H
 
+#include <string>
+
 
 enum class EMainParams {
     _strength,
@@ -36,7 +38,8 @@ enum class EMoveParams {
 
 enum class EHitParams {
     _atk_speed,
-    _damage,
+    _min_damage,
+    _max_damage,
     _durability,
     _max_durability
 };
@@ -46,6 +49,14 @@ enum class EPosParams {
     _y,
     _time,
     _direction
+};
+
+enum class EDirection {
+    _stop,
+    _left,
+    _right,
+    _up,
+    _down
 };
 
 
@@ -83,7 +94,8 @@ const EExpParams EExpParam[] = {
 
 const EHitParams EHitParam[] = {
     EHitParams::_atk_speed, 
-    EHitParams::_damage, 
+    EHitParams::_min_damage,
+    EHitParams::_max_damage, 
     EHitParams::_durability,
     EHitParams::_max_durability
 };
@@ -93,15 +105,6 @@ const EPosParams EPosParam[] = {
     EPosParams::_y, 
     EPosParams::_time, 
     EPosParams::_direction
-};
-
-
-enum class EDirection {
-    _stop,
-    _left,
-    _right,
-    _up,
-    _down
 };
 
 

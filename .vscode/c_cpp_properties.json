@@ -5,6 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/object",
+                "${workspaceFolder}/random",
                 "${workspaceFolder}/classifier/inc",
                 "${workspaceFolder}/params/inc",
                 "${workspaceFolder}/item/inc",
@@ -25,6 +26,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/object",
+                "${workspaceFolder}/random",
                 "${workspaceFolder}/classifier/inc",
                 "${workspaceFolder}/params/inc",
                 "${workspaceFolder}/item/inc",

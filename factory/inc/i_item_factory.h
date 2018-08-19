@@ -6,7 +6,7 @@
 
 class IItemFactory {
 public:
-    virtual void build_item(IItem&) = 0;
+    virtual void build_item(IItem&) const = 0;
 
 protected:
     IItemFactory() { }

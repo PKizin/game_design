@@ -84,6 +84,8 @@ enum class EPotionProperty1 {
 };
 
 
+// TODO: delete tags from here
+
 const std::string EItemClassTags[] = { "none", "weapon", "armor", "jewerly", "potion" };
 const std::string EWeaponTypeTags[] = { "none", "stick", "dagger", "sword", "staff" };
 const std::string EWeaponMatTags[] = { "none", "wood", "steel", "glass" };

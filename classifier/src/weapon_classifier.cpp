@@ -66,11 +66,11 @@ void WeaponClassifier::set_property1(int property1) {
 
 
 void WeaponClassifier::print() const {
-    std::cout << "This " 
-        << EItemClassTags[ static_cast<int>(_class) ] << " is " 
-        << EWeaponPropTags[ static_cast<int>(_property1) ] << " " 
-        << EWeaponTypeTags[ static_cast<int>(_type) ] << " made by " 
-        << EWeaponMatTags[ static_cast<int>(_material) ] << std::endl;
+    std::cout << "classifier:\n";
+    std::cout << "\tclass     : " << EItemClassTags[ static_cast<int>(_class) ] << '\n';
+    std::cout << "\ttype      : " << EWeaponTypeTags[ static_cast<int>(_type) ] << '\n';
+    std::cout << "\tmaterial  : " << EWeaponMatTags[ static_cast<int>(_material) ] << '\n';
+    std::cout << "\tproperty1 : " << EWeaponPropTags[ static_cast<int>(_property1) ] << "\n\n";
 }
 
 

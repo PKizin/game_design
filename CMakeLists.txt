@@ -5,6 +5,7 @@ project(my_game)
 
 file(GLOB SOURCES
     *.cpp
+    random/*.cpp
     classifier/src/*.cpp
     params/src/*.cpp
     item/src/*.cpp
@@ -13,6 +14,7 @@ file(GLOB SOURCES
 
 include_directories(
     object
+    random
     classifier/inc
     params/inc
     item/inc

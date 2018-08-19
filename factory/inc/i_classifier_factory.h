@@ -6,7 +6,7 @@
 
 class IClassifierFactory {
 public:
-    virtual void build_classifier(IClassifier&) = 0;
+    virtual void build_classifier(IClassifier&) const = 0;
 
 protected:
     IClassifierFactory() { }

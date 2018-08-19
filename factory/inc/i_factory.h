@@ -10,11 +10,11 @@
 
 class IFactory : public IClassifierFactory, public IParamsFactory, public ICreatureFactory, public IItemFactory, public IObstacleFactory {
 public:
-    virtual void build_classifier(IClassifier&) { }
-    virtual void build_params(IParams&) { }
-    virtual void build_creature(/* ICreature& */) { }
-    virtual void build_item(IItem&) { }
-    virtual void build_obstacle(IItem&) { }
+    virtual void build_classifier(IClassifier&) const { }
+    virtual void build_params(IParams&) const { }
+    virtual void build_creature(/* ICreature& */) const { }
+    virtual void build_item(IItem&) const { }
+    virtual void build_obstacle(/* IObstacle& */) const { }
 
 protected:
     IFactory() { }

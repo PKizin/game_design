@@ -4,7 +4,7 @@
 
 class IObstacleFactory {
 public:
-    virtual void build_obstacle(/* IObstacle& */) = 0;
+    virtual void build_obstacle(/* IObstacle& */) const = 0;
 
 protected:
     IObstacleFactory() { }

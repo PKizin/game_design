@@ -4,7 +4,7 @@
 
 class ICreatureFactory {
 public:
-    virtual void build_creature(/* ICreature& */) = 0;
+    virtual void build_creature(/* ICreature& */) const = 0;
 
 protected:
     ICreatureFactory() { }

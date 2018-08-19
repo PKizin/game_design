@@ -18,13 +18,16 @@ public:
     virtual void broke(float) = 0;
     virtual void repair() = 0;
 
+    virtual void print() const = 0;
+    
+    virtual IItem& operator=(const IItem&) { return *this; }
+
 protected:
     IItem() { }
     virtual ~IItem() { }
 
 private:
     IItem(const IItem&);
-    IItem& operator=(const IItem&);
 };
 
 

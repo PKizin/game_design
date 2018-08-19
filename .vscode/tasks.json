@@ -7,7 +7,7 @@
             "label": "build by cmake",
             "type": "shell",
             //"command": "clear && cmake -G \"Unix Makefiles\" -DCMAKE_BUILD_TYPE=Debug && make -j 5",
-            "command": "cls && cmake -G \"MinGW Makefiles\" -DCMAKE_BUILD_TYPE=Debug && mingw32-make -j 5",
+            "command": "cmake -G \"MinGW Makefiles\" -DCMAKE_BUILD_TYPE=Debug && mingw32-make -j 1",
             "group": {
                 "kind": "build",
                 "isDefault": true

@@ -6,12 +6,16 @@
 
 class WeaponFactory : public IFactory {
 public:
-    WeaponFactory();
+    WeaponFactory() { }
     virtual ~WeaponFactory() { }
 
-    void build_classifier(IClassifier&) override;
-    void build_params(IParams&) override;
-    void build_item(IItem&) override;
+    void build_classifier(IClassifier&) const override;
+    void build_params(IParams&) const override;
+    void build_item(IItem&) const override;
+
+private:
+    void correct_params(IParams&) const;
+    void correct_requirements(IParams&) const;
 };
 
 

@@ -46,3 +46,21 @@ void Weapon::repair() {
     _params.set_hit_param(EHitParams::_durability, max_durability);
 }
 
+
+void Weapon::print() const {
+    _classifier.print();
+    _params.print(false);
+    _requirements.print(true);
+}
+
+
+IItem& Weapon::operator=(const IItem& other) {
+    return operator=( static_cast< const Weapon& >(other) );
+}
+
+Weapon& Weapon::operator=(const Weapon& other) {
+    _classifier = other._classifier;
+    _params = other._params;
+    _requirements = other._requirements;
+    return *this;
+}

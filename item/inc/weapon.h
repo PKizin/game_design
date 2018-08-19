@@ -8,6 +8,7 @@
 
 class Weapon : public IItem {
 public:
+    Weapon() { }
     Weapon(const IClassifier&, const IParams&, const IParams&);
     virtual ~Weapon() { }
 
@@ -22,9 +23,12 @@ public:
     void broke(float) override;
     void repair() override;
 
-private:
-    Weapon();
+    void print() const override;
 
+    IItem& operator=(const IItem&) override;
+    Weapon& operator=(const Weapon&);
+
+private:
     WeaponClassifier _classifier;
     Params _params;
     Params _requirements;

@@ -3,10 +3,11 @@
 #include "weapon_factory.h"
 #include "weapon.h"
 #include "params.h"
+#include "randomizer.h"
 using namespace std;
 
 int main() {
-    WeaponClassifier cla(EWeaponType::_staff, EWeaponMaterial::_wood, EWeaponProperty1::_two_handed);
+    /*WeaponClassifier cla(EWeaponType::_staff, EWeaponMaterial::_wood, EWeaponProperty1::_two_handed);
     Params par;
     Params req(par);
 
@@ -27,7 +28,18 @@ int main() {
     ref_cla.set_property1( static_cast<int>(EWeaponProperty1::_one_handed) );
     ref_wep.set_classifier( ref_cla );
     ref_wep.get_classifier( ref_cla1 );
-    ref_cla1.print();
+    ref_cla1.print();*/
+
+    Randomizer::init();
+
+    WeaponFactory weapon_factory;
+    IFactory& factory = weapon_factory;
+    
+    Weapon weapon;
+    IItem& item = weapon;
+
+    factory.build_item(item);
+    item.print();
     
     return 0;
 }
