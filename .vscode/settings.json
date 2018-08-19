@@ -39,7 +39,8 @@
         "cstring": "cpp",
         "ctime": "cpp",
         "memory": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "ratio": "cpp"
     },
     "files.exclude": {
         "**/.git": true,

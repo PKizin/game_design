@@ -49,8 +49,23 @@ void Weapon::repair() {
 
 void Weapon::print() const {
     _classifier.print();
-    _params.print(false);
-    _requirements.print(true);
+
+    std::cout << "params:\n";
+    std::cout << "\tdamage     : " << static_cast<int>(_params.get_hit_param(EHitParams::_min_damage));
+    std::cout << '-' << static_cast<int>(_params.get_hit_param(EHitParams::_max_damage)) << '\n';
+    std::cout << "\tatk speed  : " << _params.get_hit_param(EHitParams::_atk_speed) << '\n';
+    std::cout << "\tdurability : " << static_cast<int>(_params.get_hit_param(EHitParams::_durability));
+    std::cout << '(' << static_cast<int>(_params.get_hit_param(EHitParams::_max_durability)) << ")\n";
+    std::cout << "\tweight     : " << _params.get_move_param(EMoveParams::_weight) << "\n\n";
+    
+    std::cout << "requirements:\n";
+    std::cout << "\tlevel    : " << static_cast<int>(_requirements.get_exp_param(EExpParams::_level)) << '\n';
+    std::cout << "\tstrength : " << static_cast<int>(_requirements.get_main_param(EMainParams::_strength)) << '\n';
+    std::cout << "\tstamina  : " << static_cast<int>(_requirements.get_main_param(EMainParams::_stamina)) << '\n';
+    std::cout << "\tagility  : " << static_cast<int>(_requirements.get_main_param(EMainParams::_agility)) << '\n';
+    std::cout << "\tmind     : " << static_cast<int>(_requirements.get_main_param(EMainParams::_mind)) << '\n';
+    std::cout << "\twill     : " << static_cast<int>(_requirements.get_main_param(EMainParams::_will)) << '\n';
+    std::cout << "\tluck     : " << static_cast<int>(_requirements.get_main_param(EMainParams::_luck)) << "\n\n";
 }
 
 

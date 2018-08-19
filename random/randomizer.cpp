@@ -4,7 +4,7 @@
 
 
 void Randomizer::init() {
-    srand(time(0));
+    srand(time(0) * time(0));
 }
 
 

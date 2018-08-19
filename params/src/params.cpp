@@ -92,25 +92,6 @@ void Params::set_pos_param(EPosParams param, float value) {
 }
 
 
-void Params::print(bool requirements) const {
-    if (requirements) {
-        std::cout << "requirements:\n";
-        std::cout << "\tlevel     : " << static_cast<int>(_exp_params.at(EExpParams::_level)) << '\n';
-        std::cout << "\tstrength  : " << static_cast<int>(_main_params.at(EMainParams::_strength)) << '\n';
-        std::cout << "\tstamina   : " << static_cast<int>(_main_params.at(EMainParams::_stamina)) << '\n';
-        std::cout << "\tagility   : " << static_cast<int>(_main_params.at(EMainParams::_agility)) << '\n';
-        std::cout << "\tmind      : " << static_cast<int>(_main_params.at(EMainParams::_mind)) << '\n';
-        std::cout << "\twill      : " << static_cast<int>(_main_params.at(EMainParams::_will)) << '\n';
-        std::cout << "\tluck      : " << static_cast<int>(_main_params.at(EMainParams::_luck)) << "\n\n";
-    }
-    else {
-        std::cout << "params:\n";
-        std::cout << "\tdamage    : " << static_cast<int>(_hit_params.at(EHitParams::_min_damage));
-        std::cout << '-' << static_cast<int>(_hit_params.at(EHitParams::_max_damage)) << "\n\n";
-    }
-}
-
-
 IParams& Params::operator=(const IParams& other) {
     return operator=( static_cast< const Params& >(other) );
 }

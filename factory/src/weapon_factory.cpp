@@ -6,11 +6,12 @@
 
 
 void WeaponFactory::build_classifier(IClassifier& classifier) const {
-    classifier = WeaponClassifier(
-        static_cast< EWeaponType >(Randomizer::dice( static_cast<int>(EWeaponType::_none) + 1, static_cast<int>(EWeaponType::_staff) )),
-        static_cast< EWeaponMaterial >(Randomizer::dice( static_cast<int>(EWeaponMaterial::_none) + 1, static_cast<int>(EWeaponMaterial::_glass) )),
-        static_cast< EWeaponProperty1 >(Randomizer::dice( static_cast<int>(EWeaponProperty1::_none) + 1, static_cast<int>(EWeaponProperty1::_two_handed) ))
-    );
+    EWeaponType type = static_cast< EWeaponType >(Randomizer::dice( static_cast<int>(EWeaponType::_none) + 1, static_cast<int>(EWeaponType::_staff) ));
+    EWeaponMaterial mat = static_cast< EWeaponMaterial >(Randomizer::dice( static_cast<int>(EWeaponMaterial::_none) + 1, static_cast<int>(EWeaponMaterial::_glass) ));
+    EWeaponProperty1 prop1 = (type == EWeaponType::_dagger) ? EWeaponProperty1::_one_handed :
+        static_cast< EWeaponProperty1 >(Randomizer::dice( static_cast<int>(EWeaponProperty1::_none) + 1, static_cast<int>(EWeaponProperty1::_two_handed) ));
+
+    classifier = WeaponClassifier(type, mat, prop1);
 }
 
 void WeaponFactory::build_params(IParams& params) const
@@ -35,15 +36,15 @@ void WeaponFactory::build_params(IParams& params) const
     params.set_life_param(ELifeParams::_max_mp, params.get_life_param(ELifeParams::_mp) + static_cast<float>(Randomizer::dice(0, 100)));
     params.set_life_param(ELifeParams::_max_stamina_pts, params.get_life_param(ELifeParams::_stamina_pts) + static_cast<float>(Randomizer::dice(0, 100)));
 
-    params.set_move_param(EMoveParams::_move_speed, static_cast<float>(Randomizer::dice(0, 20)));
-    params.set_move_param(EMoveParams::_weight, static_cast<float>(Randomizer::dice(0, 5)));
+    params.set_move_param(EMoveParams::_move_speed, static_cast<float>(Randomizer::dice(50, 150)) / 100.0);
+    params.set_move_param(EMoveParams::_weight, static_cast<float>(Randomizer::dice(10, 50)) / 10.0);
 
     params.set_exp_param(EExpParams::_level, static_cast<float>(Randomizer::dice(1, 10)));
 
-    params.set_hit_param(EHitParams::_atk_speed, static_cast<float>(Randomizer::dice(0, 20)));
+    params.set_hit_param(EHitParams::_atk_speed, static_cast<float>(Randomizer::dice(50, 150)) / 100.0);
     params.set_hit_param(EHitParams::_min_damage, static_cast<float>(Randomizer::dice(1, 10)));
     params.set_hit_param(EHitParams::_max_damage, params.get_hit_param(EHitParams::_min_damage) + static_cast<float>(Randomizer::dice(0, 10)));
-    params.set_hit_param(EHitParams::_durability, static_cast<float>(Randomizer::dice(0, 100)));
+    params.set_hit_param(EHitParams::_durability, static_cast<float>(Randomizer::dice(40, 100)));
     params.set_hit_param(EHitParams::_max_durability, 100.0);
 }
 
