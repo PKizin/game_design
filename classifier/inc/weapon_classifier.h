@@ -20,9 +20,7 @@ public:
     void set_type(int) override;
     void set_material(int) override;
     void set_property1(int) override;
-
-    void print() const override;
-
+    
     IClassifier& operator=(const IClassifier&) override;
     WeaponClassifier& operator=(const WeaponClassifier&);
 

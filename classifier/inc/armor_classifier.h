@@ -19,8 +19,6 @@ public:
     void set_type(int) override;
     void set_material(int) override;
 
-    void print() const override;
-
     IClassifier& operator=(const IClassifier&) override;
     ArmorClassifier& operator=(const ArmorClassifier&);
 

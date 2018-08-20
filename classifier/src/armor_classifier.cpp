@@ -54,18 +54,6 @@ void ArmorClassifier::set_material(int val) {
 }
 
 
-void ArmorClassifier::print() const {
-    const std::string class_tags[] = { "none", "weapon", "armor", "jewerly", "potion" };
-    const std::string type_tags[] = { "none", "head", "shoulders", "chest", "hands", "belt", "legs", "feet" };
-    const std::string material_tags[] = { "none", "rags", "cotton", "mail", "leather" };
-
-    std::cout << "classifier:\n";
-    std::cout << "\tclass     : " << class_tags[ static_cast<int>(_class) ] << '\n';
-    std::cout << "\ttype      : " << type_tags[ static_cast<int>(_type) ] << '\n';
-    std::cout << "\tmaterial  : " << material_tags[ static_cast<int>(_material) ] << "\n\n";
-}
-
-
 IClassifier& ArmorClassifier::operator=(const IClassifier& other) {
     return operator=( static_cast< const ArmorClassifier& >(other) );
 }

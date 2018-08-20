@@ -20,8 +20,6 @@ public:
     virtual void set_material(int) { }
     virtual void set_property1(int) { }
 
-    virtual void print() const { }
-
     virtual IClassifier& operator=(const IClassifier&) { return *this; }
 
 protected:

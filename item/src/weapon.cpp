@@ -1,4 +1,5 @@
 #include "weapon.h"
+#include <vector>
 
 
 Weapon::Weapon(const IClassifier& classifier, const IParams& params, const IParams& requirements) : 
@@ -48,28 +49,44 @@ void Weapon::repair() {
 
 
 void Weapon::print() const {
-    std::cout << "+--------------+\n";
-    std::cout << "|     item     |\n";
-    std::cout << "+--------------+\n";
-    
-    _classifier.print();
+    const char tab = '\t';
+    const char end_line = '\n';
+    const std::string end_section = "\n\n";
 
-    std::cout << "params:\n";
-    std::cout << "\tdamage     : " << static_cast<int>(_params.get_hit_param(EHitParams::_min_damage));
-    std::cout << '-' << static_cast<int>(_params.get_hit_param(EHitParams::_max_damage)) << '\n';
-    std::cout << "\tatk speed  : " << _params.get_hit_param(EHitParams::_atk_speed) << '\n';
-    std::cout << "\tdurability : " << static_cast<int>(_params.get_hit_param(EHitParams::_durability));
-    std::cout << '(' << static_cast<int>(_params.get_hit_param(EHitParams::_max_durability)) << ")\n";
-    std::cout << "\tweight     : " << _params.get_move_param(EMoveParams::_weight) << "\n\n";
+    const std::vector< std::string > class_tags = { "none", "weapon", "armor", "jewerly", "potion" };
+    const std::vector< std::string > type_tags = { "none", "stick", "dagger", "sword", "staff" };
+    const std::vector< std::string > material_tags = { "none", "wood", "steel", "glass" };
+    const std::vector< std::string > property1_tags = { "none", "one-handed", "two-handed" };
+
+    const int min_damage = static_cast<int>(_params.get_hit_param(EHitParams::_min_damage));
+    const int max_damage = static_cast<int>(_params.get_hit_param(EHitParams::_max_damage));
+    const int cur_durability = static_cast<int>(_params.get_hit_param(EHitParams::_durability));
+    const int max_durability = static_cast<int>(_params.get_hit_param(EHitParams::_max_durability));
+
+    std::cout << "+--------------+" << end_line;
+    std::cout << "|     item     |" << end_line;
+    std::cout << "+--------------+" << end_line;
+
+    std::cout << "classifier:" << end_line;
+    std::cout << tab << "class     : " << class_tags[ _classifier.get_class() ] << end_line;
+    std::cout << tab << "type      : " << type_tags[ _classifier.get_type() ] << end_line;
+    std::cout << tab << "material  : " << material_tags[ _classifier.get_material() ] << end_line;
+    std::cout << tab << "property1 : " << property1_tags[ _classifier.get_property1() ] << end_section;
+
+    std::cout << "params:" << end_line;
+    std::cout << tab << "damage     : " << min_damage << '-' << max_damage << end_line;
+    std::cout << tab << "atk speed  : " << _params.get_hit_param(EHitParams::_atk_speed) << end_line;
+    std::cout << tab << "durability : " << cur_durability << '(' << max_durability << ')' << end_line;
+    std::cout << tab << "weight     : " << _params.get_move_param(EMoveParams::_weight) << end_section;
     
-    std::cout << "requirements:\n";
-    std::cout << "\tlevel    : " << static_cast<int>(_requirements.get_exp_param(EExpParams::_level)) << '\n';
-    std::cout << "\tstrength : " << static_cast<int>(_requirements.get_main_param(EMainParams::_strength)) << '\n';
-    std::cout << "\tstamina  : " << static_cast<int>(_requirements.get_main_param(EMainParams::_stamina)) << '\n';
-    std::cout << "\tagility  : " << static_cast<int>(_requirements.get_main_param(EMainParams::_agility)) << '\n';
-    std::cout << "\tmind     : " << static_cast<int>(_requirements.get_main_param(EMainParams::_mind)) << '\n';
-    std::cout << "\twill     : " << static_cast<int>(_requirements.get_main_param(EMainParams::_will)) << '\n';
-    std::cout << "\tluck     : " << static_cast<int>(_requirements.get_main_param(EMainParams::_luck)) << "\n\n";
+    std::cout << "requirements:" << end_line;
+    std::cout << tab << "level    : " << static_cast<int>(_requirements.get_exp_param(EExpParams::_level)) << end_line;
+    std::cout << tab << "strength : " << static_cast<int>(_requirements.get_main_param(EMainParams::_strength)) << end_line;
+    std::cout << tab << "stamina  : " << static_cast<int>(_requirements.get_main_param(EMainParams::_stamina)) << end_line;
+    std::cout << tab << "agility  : " << static_cast<int>(_requirements.get_main_param(EMainParams::_agility)) << end_line;
+    std::cout << tab << "mind     : " << static_cast<int>(_requirements.get_main_param(EMainParams::_mind)) << end_line;
+    std::cout << tab << "will     : " << static_cast<int>(_requirements.get_main_param(EMainParams::_will)) << end_line;
+    std::cout << tab << "luck     : " << static_cast<int>(_requirements.get_main_param(EMainParams::_luck)) << end_section;
 }
 
 

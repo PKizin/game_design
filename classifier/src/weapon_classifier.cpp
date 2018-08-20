@@ -65,20 +65,6 @@ void WeaponClassifier::set_property1(int property1) {
 }
 
 
-void WeaponClassifier::print() const {
-    const std::string class_tags[] = { "none", "weapon", "armor", "jewerly", "potion" };
-    const std::string type_tags[] = { "none", "stick", "dagger", "sword", "staff" };
-    const std::string material_tags[] = { "none", "wood", "steel", "glass" };
-    const std::string property1_tags[] = { "none", "one-handed", "two-handed" };
-
-    std::cout << "classifier:\n";
-    std::cout << "\tclass     : " << class_tags[ static_cast<int>(_class) ] << '\n';
-    std::cout << "\ttype      : " << type_tags[ static_cast<int>(_type) ] << '\n';
-    std::cout << "\tmaterial  : " << material_tags[ static_cast<int>(_material) ] << '\n';
-    std::cout << "\tproperty1 : " << property1_tags[ static_cast<int>(_property1) ] << "\n\n";
-}
-
-
 IClassifier& WeaponClassifier::operator=(const IClassifier& other) {
     return operator=( static_cast< const WeaponClassifier& >(other) );
 }
