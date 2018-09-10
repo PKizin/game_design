@@ -18,8 +18,8 @@ public:
     TreeClassifier& operator=(const TreeClassifier&);
     
 private:
-    EObstacleClass _class;
-    ETreeType _type;
+    ObstacleClass _class;
+    TreeType _type;
 };
 
 

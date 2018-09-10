@@ -8,7 +8,8 @@ public:
     ~Randomizer() { }
 
     static void init();
-    static int dice(int min, int max);
+    static int dice_int(int min, int max);
+    static float dice_real(int min, int max);
 
 private:
     Randomizer(const Randomizer&);

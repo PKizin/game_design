@@ -3,8 +3,8 @@
 
 TreeClassifier::TreeClassifier() :
     IClassifier(),
-    _class( EObstacleClass::_tree ),
-    _type( ETreeType::_none )
+    _class( ObstacleClass::_tree ),
+    _type( TreeType::_NONE )
 {
 }
 
@@ -26,7 +26,7 @@ int TreeClassifier::get_type() const {
 
 
 void TreeClassifier::set_type(int type) {
-    _type = static_cast< ETreeType >(type);
+    _type = static_cast< TreeType >(type);
 }
 
 

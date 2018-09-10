@@ -3,9 +3,9 @@
 
 PotionClassifier::PotionClassifier() :
     IClassifier(),
-    _class( EItemClass::_potion ),
-    _type( EPotionType::_none ),
-    _property1( EPotionProperty1::_none )
+    _class( ItemClass::_potion ),
+    _type( PotionType::_NONE ),
+    _property1( PotionProperty1::_NONE )
 {
 }
 
@@ -32,11 +32,11 @@ int PotionClassifier::get_property1() const {
 
 
 void PotionClassifier::set_type(int type) {
-    _type = static_cast< EPotionType >(type);
+    _type = static_cast< PotionType >(type);
 }
 
 void PotionClassifier::set_property1(int property1) {
-    _property1 = static_cast< EPotionProperty1 >(property1);
+    _property1 = static_cast< PotionProperty1 >(property1);
 }
 
 

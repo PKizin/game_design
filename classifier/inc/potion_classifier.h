@@ -20,9 +20,9 @@ public:
     PotionClassifier& operator=(const PotionClassifier&);
 
 private:
-    EItemClass _class;
-    EPotionType _type;
-    EPotionProperty1 _property1;
+    ItemClass _class;
+    PotionType _type;
+    PotionProperty1 _property1;
 };
 
 

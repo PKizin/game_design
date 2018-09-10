@@ -18,8 +18,8 @@ public:
     RockClassifier& operator=(const RockClassifier&);
 
 private:
-    EObstacleClass _class;
-    ERockType _type;
+    ObstacleClass _class;
+    RockType _type;
 };
 
 

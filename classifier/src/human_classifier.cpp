@@ -3,8 +3,8 @@
 
 HumanClassifier::HumanClassifier() :
     IClassifier(),
-    _class( ECreatureClass::_human ),
-    _type( EHumanType::_none )
+    _class( CreatureClass::_human ),
+    _type( HumanType::_NONE )
 {
 }
 
@@ -26,7 +26,7 @@ int HumanClassifier::get_type() const {
 
 
 void HumanClassifier::set_type(int val) {
-    _type = static_cast< EHumanType >(val);
+    _type = static_cast< HumanType >(val);
 }
 
 

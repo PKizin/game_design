@@ -8,7 +8,11 @@ void Randomizer::init() {
 }
 
 
-int Randomizer::dice(int min, int max) {
+int Randomizer::dice_int(int min, int max) {
     return min + rand() % (max - min + 1);
+}
+
+float Randomizer::dice_real(int min, int max) {
+    return static_cast<float>( Randomizer::dice_int(min, max) );
 }
 

@@ -18,8 +18,8 @@ public:
     TerrainClassifier& operator=(const TerrainClassifier&);
 
 private:
-    EObstacleClass _class;
-    ETerrainType _type;
+    ObstacleClass _class;
+    TerrainType _type;
 };
 
 

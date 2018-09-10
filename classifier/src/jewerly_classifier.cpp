@@ -3,9 +3,9 @@
 
 JewerlyClassifier::JewerlyClassifier() :
     IClassifier(),
-    _class( EItemClass::_jewerly ),
-    _type( EJewerlyType::_none ),
-    _material( EJewerlyMaterial::_none )
+    _class( ItemClass::_jewerly ),
+    _type( JewerlyType::_NONE ),
+    _material( JewerlyMaterial::_NONE )
 {
 }
 
@@ -32,11 +32,11 @@ int JewerlyClassifier::get_material() const {
 
 
 void JewerlyClassifier::set_type(int type) {
-    _type = static_cast< EJewerlyType >(type);
+    _type = static_cast< JewerlyType >(type);
 }
 
 void JewerlyClassifier::set_material(int material) {
-    _material = static_cast< EJewerlyMaterial >(material);
+    _material = static_cast< JewerlyMaterial >(material);
 }
 
 

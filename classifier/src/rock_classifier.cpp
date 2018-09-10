@@ -3,8 +3,8 @@
 
 RockClassifier::RockClassifier() :
     IClassifier(),
-    _class( EObstacleClass::_rock ),
-    _type( ERockType::_none )
+    _class( ObstacleClass::_rock ),
+    _type( RockType::_NONE )
 {
 }
 
@@ -26,7 +26,7 @@ int RockClassifier::get_type() const {
 
 
 void RockClassifier::set_type(int type) {
-    _type = static_cast< ERockType >(type);
+    _type = static_cast< RockType >(type);
 }
 
 

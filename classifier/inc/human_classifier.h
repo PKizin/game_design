@@ -18,8 +18,8 @@ public:
     HumanClassifier& operator=(const HumanClassifier&);
 
 private:
-    ECreatureClass _class;
-    EHumanType _type;
+    CreatureClass _class;
+    HumanType _type;
 };
 
 

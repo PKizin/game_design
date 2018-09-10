@@ -9,13 +9,14 @@ public:
     ArmorFactory() { }
     virtual ~ArmorFactory() { }
 
-    void build_classifier(IClassifier&) const override;
-    void build_params(IParams&) const override;
     void build_item(IItem&) const override;
 
 private:
-    void correct_params(IParams&) const;
-    void correct_requirements(IParams&) const;
+    void build_classifier(IClassifier&) const override;
+    void build_params(const IClassifier&, IParams&) const override;
+
+    void correct_params(const IClassifier&, IParams&) const;
+    void correct_requirements(const IClassifier&, IParams&) const;
 };
 
 

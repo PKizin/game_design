@@ -4,16 +4,16 @@
 
 WeaponClassifier::WeaponClassifier() :
     IClassifier(),
-    _class( EItemClass::_weapon ),
-    _type( EWeaponType::_none ),
-    _material( EWeaponMaterial::_none ),
-    _property1( EWeaponProperty1::_none )
+    _class( ItemClass::_weapon ),
+    _type( WeaponType::_NONE ),
+    _material( WeaponMaterial::_NONE ),
+    _property1( WeaponProperty1::_NONE )
 {
 }
 
-WeaponClassifier::WeaponClassifier(EWeaponType type, EWeaponMaterial material, EWeaponProperty1 property1) :
+WeaponClassifier::WeaponClassifier(WeaponType type, WeaponMaterial material, WeaponProperty1 property1) :
     IClassifier(),
-    _class( EItemClass::_weapon ),
+    _class( ItemClass::_weapon ),
     _type( type ),
     _material( material ),
     _property1( property1 )
@@ -53,15 +53,15 @@ int WeaponClassifier::get_property1() const {
 
 
 void WeaponClassifier::set_type(int type) {
-    _type = static_cast< EWeaponType >(type);
+    _type = static_cast< WeaponType >(type);
 }
 
 void WeaponClassifier::set_material(int material) {
-    _material = static_cast< EWeaponMaterial >(material);
+    _material = static_cast< WeaponMaterial >(material);
 }
 
 void WeaponClassifier::set_property1(int property1) {
-    _property1 = static_cast< EWeaponProperty1 >(property1);
+    _property1 = static_cast< WeaponProperty1 >(property1);
 }
 
 

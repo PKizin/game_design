@@ -4,15 +4,15 @@
 
 ArmorClassifier::ArmorClassifier() : 
     IClassifier(),
-    _class( EItemClass::_weapon ),
-    _type( EArmorType::_none ),
-    _material( EArmorMaterial::_none ) 
+    _class( ItemClass::_weapon ),
+    _type( ArmorType::_NONE ),
+    _material( ArmorMaterial::_NONE ) 
 {
 }
 
-ArmorClassifier::ArmorClassifier(EArmorType type, EArmorMaterial material) :
+ArmorClassifier::ArmorClassifier(ArmorType type, ArmorMaterial material) :
     IClassifier(),
-    _class( EItemClass::_armor ),
+    _class( ItemClass::_armor ),
     _type( type ),
     _material( material )
 {
@@ -46,11 +46,11 @@ int ArmorClassifier::get_material() const {
 
 
 void ArmorClassifier::set_type(int val) {
-    _type = static_cast< EArmorType >(val);
+    _type = static_cast< ArmorType >(val);
 }
 
 void ArmorClassifier::set_material(int val) {
-    _material = static_cast< EArmorMaterial >(val);
+    _material = static_cast< ArmorMaterial >(val);
 }
 
 

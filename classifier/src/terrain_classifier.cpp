@@ -3,8 +3,8 @@
 
 TerrainClassifier::TerrainClassifier() :
     IClassifier(),
-    _class( EObstacleClass::_terrain ),
-    _type( ETerrainType::_none )
+    _class( ObstacleClass::_terrain ),
+    _type( TerrainType::_NONE )
 {
 }
 
@@ -26,7 +26,7 @@ int TerrainClassifier::get_type() const {
 
 
 void TerrainClassifier::set_type(int type) {
-    _type = static_cast< ETerrainType >(type);
+    _type = static_cast< TerrainType >(type);
 }
 
 

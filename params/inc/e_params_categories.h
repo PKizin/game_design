@@ -4,16 +4,16 @@
 #include <string>
 
 
-enum class EMainParams {
+enum EMainParams {
     _strength,
     _stamina,
     _agility,
     _mind,
     _will,
-    _luck
+    _luck,
 };
 
-enum class ELifeParams {
+enum ELifeParams {
     _hp,
     _mp,
     _stamina_pts,
@@ -24,19 +24,19 @@ enum class ELifeParams {
     _max_stamina_pts
 };
 
-enum class EExpParams {
+enum EExpParams {
     _level,
     _exp,
     _free_points
 };
 
-enum class EMoveParams {
+enum EMoveParams {
     _move_speed,
     _weight,
     _max_weight
 };
 
-enum class EHitParams {
+enum EHitParams {
     _atk_speed,
     _min_damage,
     _max_damage,
@@ -44,14 +44,14 @@ enum class EHitParams {
     _max_durability
 };
 
-enum class EPosParams {
+enum EPosParams {
     _x,
     _y,
     _time,
     _direction
 };
 
-enum class EDirection {
+enum EDirection {
     _stop,
     _left,
     _right,

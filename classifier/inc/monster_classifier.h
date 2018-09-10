@@ -18,8 +18,8 @@ public:
     MonsterClassifier& operator=(const MonsterClassifier&);
 
 private:
-    ECreatureClass _class;
-    EMonsterType _type;
+    CreatureClass _class;
+    MonsterType _type;
 };
 
 

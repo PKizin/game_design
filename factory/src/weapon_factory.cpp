@@ -6,73 +6,126 @@
 
 
 void WeaponFactory::build_classifier(IClassifier& classifier) const {
-    EWeaponType type = static_cast< EWeaponType >(Randomizer::dice( static_cast<int>(EWeaponType::_none) + 1, static_cast<int>(EWeaponType::_staff) ));
-    EWeaponMaterial mat = static_cast< EWeaponMaterial >(Randomizer::dice( static_cast<int>(EWeaponMaterial::_none) + 1, static_cast<int>(EWeaponMaterial::_glass) ));
-    EWeaponProperty1 prop1 = (type == EWeaponType::_dagger) ? EWeaponProperty1::_one_handed :
-        static_cast< EWeaponProperty1 >(Randomizer::dice( static_cast<int>(EWeaponProperty1::_none) + 1, static_cast<int>(EWeaponProperty1::_two_handed) ));
+    const auto& type = static_cast< WeaponType >(Randomizer::dice_int(WeaponType::_NONE + 1, WeaponType::_MAX - 1));
+    const auto& mat = static_cast< WeaponMaterial >(Randomizer::dice_int(WeaponMaterial::_NONE + 1, WeaponMaterial::_MAX - 1));
+    WeaponProperty1 prop1;
+    if (type == WeaponType::_dagger) 
+    {
+        prop1 = WeaponProperty1::_one_handed;
+    } 
+    else 
+    {
+        prop1 = static_cast< WeaponProperty1 >(Randomizer::dice_int(WeaponProperty1::_NONE + 1, WeaponProperty1::_MAX - 1));
+    }
 
     classifier = WeaponClassifier(type, mat, prop1);
 }
 
-void WeaponFactory::build_params(IParams& params) const
-{
-    // TODO: params must depend on EExpParams::_level
-
+void WeaponFactory::build_params(const IClassifier& classifier, IParams& params) const {
     params = Params();
 
-    params.set_main_param(EMainParams::_strength, static_cast<float>(Randomizer::dice(0, 5)));
-    params.set_main_param(EMainParams::_stamina, static_cast<float>(Randomizer::dice(0, 5)));
-    params.set_main_param(EMainParams::_agility, static_cast<float>(Randomizer::dice(0, 5)));
-    params.set_main_param(EMainParams::_mind, static_cast<float>(Randomizer::dice(0, 5)));
-    params.set_main_param(EMainParams::_will, static_cast<float>(Randomizer::dice(0, 5)));
-    params.set_main_param(EMainParams::_luck, static_cast<float>(Randomizer::dice(0, 5)));
+    const auto& weapon_type = static_cast< WeaponType >(classifier.get_type());
+    const auto& weapon_level = Randomizer::dice_real(1, 10);
+    
+    params.set_exp_param(EExpParams::_level, weapon_level);
 
-    params.set_life_param(ELifeParams::_hp, static_cast<float>(Randomizer::dice(0, 100)));
-    params.set_life_param(ELifeParams::_mp, static_cast<float>(Randomizer::dice(0, 100)));
-    params.set_life_param(ELifeParams::_stamina_pts, static_cast<float>(Randomizer::dice(0, 100)));
-    params.set_life_param(ELifeParams::_phys_protection, static_cast<float>(Randomizer::dice(0, 10)));
-    params.set_life_param(ELifeParams::_mag_protection, static_cast<float>(Randomizer::dice(0, 10)));
-    params.set_life_param(ELifeParams::_max_hp, params.get_life_param(ELifeParams::_hp) + static_cast<float>(Randomizer::dice(0, 100)));
-    params.set_life_param(ELifeParams::_max_mp, params.get_life_param(ELifeParams::_mp) + static_cast<float>(Randomizer::dice(0, 100)));
-    params.set_life_param(ELifeParams::_max_stamina_pts, params.get_life_param(ELifeParams::_stamina_pts) + static_cast<float>(Randomizer::dice(0, 100)));
+    if (weapon_type == WeaponType::_stick) 
+    {
+        const auto& strength = Randomizer::dice_real(weapon_level, weapon_level + 10);
+        const auto& agility = Randomizer::dice_real(weapon_level, weapon_level + 10);
+        const auto& stamina_pts = Randomizer::dice_real(weapon_level, weapon_level + 10) * 5.0;
+        const auto& weight = Randomizer::dice_real(30, 50) / 10.0;
+        const auto& atk_speed = Randomizer::dice_real(80, 110) / 100.0;
+        const auto& min_damage = Randomizer::dice_real(weapon_level, weapon_level + 10);
+        const auto& max_damage = min_damage + Randomizer::dice_real(0, 10);
 
-    params.set_move_param(EMoveParams::_move_speed, static_cast<float>(Randomizer::dice(50, 150)) / 100.0);
-    params.set_move_param(EMoveParams::_weight, static_cast<float>(Randomizer::dice(10, 50)) / 10.0);
+        params.set_main_param(EMainParams::_strength, strength);
+        params.set_main_param(EMainParams::_agility, agility);
+        params.set_life_param(ELifeParams::_stamina_pts, stamina_pts);
+        params.set_move_param(EMoveParams::_weight, weight);
+        params.set_hit_param(EHitParams::_atk_speed, atk_speed);
+        params.set_hit_param(EHitParams::_min_damage, min_damage);
+        params.set_hit_param(EHitParams::_max_damage, max_damage);    
+    } 
+    else if (weapon_type == WeaponType::_dagger) 
+    {
+        const auto& agility = Randomizer::dice_real(weapon_level, weapon_level + 10);
+        const auto& stamina_ptr = Randomizer::dice_real(weapon_level, weapon_level + 10) * 3.0;
+        const auto& weight = Randomizer::dice_real(10, 30) / 10.0;
+        const auto& atk_speed = Randomizer::dice_real(120, 150) / 100.0;
+        const auto& min_damage = Randomizer::dice_real(weapon_level, weapon_level + 10);
+        const auto& max_damage = min_damage + Randomizer::dice_real(0, 10);
 
-    params.set_exp_param(EExpParams::_level, static_cast<float>(Randomizer::dice(1, 10)));
+        params.set_main_param(EMainParams::_agility, agility);
+        params.set_life_param(ELifeParams::_stamina_pts, stamina_ptr);
+        params.set_move_param(EMoveParams::_weight, weight);
+        params.set_hit_param(EHitParams::_atk_speed, atk_speed);
+        params.set_hit_param(EHitParams::_min_damage, min_damage);
+        params.set_hit_param(EHitParams::_max_damage, max_damage);
+    } 
+    else if (weapon_type == WeaponType::_sword) 
+    {
+        const auto& agility = Randomizer::dice_real(weapon_level, weapon_level + 10);
+        const auto& stamina_ptr = Randomizer::dice_real(weapon_level, weapon_level + 10) * 7.0;
+        const auto& weight = Randomizer::dice_real(30, 70) / 10.0;
+        const auto& atk_speed = Randomizer::dice_real(70, 100) / 100.0;
+        const auto& min_damage = Randomizer::dice_real(weapon_level, weapon_level + 10);
+        const auto& max_damage = min_damage + Randomizer::dice_real(0, 10);
 
-    params.set_hit_param(EHitParams::_atk_speed, static_cast<float>(Randomizer::dice(50, 150)) / 100.0);
-    params.set_hit_param(EHitParams::_min_damage, static_cast<float>(Randomizer::dice(1, 10)));
-    params.set_hit_param(EHitParams::_max_damage, params.get_hit_param(EHitParams::_min_damage) + static_cast<float>(Randomizer::dice(0, 10)));
-    params.set_hit_param(EHitParams::_durability, static_cast<float>(Randomizer::dice(40, 100)));
-    params.set_hit_param(EHitParams::_max_durability, 100.0);
+        params.set_main_param(EMainParams::_strength, agility);
+        params.set_life_param(ELifeParams::_stamina_pts, stamina_ptr);
+        params.set_move_param(EMoveParams::_weight, weight);
+        params.set_hit_param(EHitParams::_atk_speed, atk_speed);
+        params.set_hit_param(EHitParams::_min_damage, min_damage);
+        params.set_hit_param(EHitParams::_max_damage, max_damage);
+    } 
+    else if (weapon_type == WeaponType::_staff) 
+    {
+        const auto& mind = Randomizer::dice_real(weapon_level, weapon_level + 10);
+        const auto& will = Randomizer::dice_real(weapon_level, weapon_level + 10);
+        const auto& mp = Randomizer::dice_real(weapon_level, weapon_level + 10) * 5.0;
+        const auto& weight = Randomizer::dice_real(40, 80) / 10.0;
+        const auto& atk_speed = Randomizer::dice_real(30, 50) / 100.0;
+        const auto& min_damage = Randomizer::dice_real(weapon_level, weapon_level + 10) * 2.0;
+        const auto& max_damage = min_damage + Randomizer::dice_real(0, 10);
+
+        params.set_main_param(EMainParams::_mind, mind);
+        params.set_main_param(EMainParams::_will, will);
+        params.set_life_param(ELifeParams::_mp, mp);
+        params.set_move_param(EMoveParams::_weight, weight);
+        params.set_hit_param(EHitParams::_atk_speed, atk_speed);
+        params.set_hit_param(EHitParams::_min_damage, min_damage);
+        params.set_hit_param(EHitParams::_max_damage, max_damage);
+    }
+
+    const auto& durability = Randomizer::dice_real(40, 100);
+    const auto& max_durability = 100.0;
+
+    params.set_hit_param(EHitParams::_durability, durability);
+    params.set_hit_param(EHitParams::_max_durability, max_durability);
 }
 
-void WeaponFactory::build_item(IItem& item) const
-{
+void WeaponFactory::build_item(IItem& item) const {
     WeaponClassifier cla;
-    IClassifier& ref_cla = cla;
-    build_classifier(ref_cla);
+    build_classifier(cla);
 
     Params par;
-    IParams& ref_par = par;
-    build_params(ref_par);
-    correct_params(ref_par);
+    build_params(cla, par);
+    correct_params(cla, par);
 
     Params req;
-    IParams& ref_req = req;
-    build_params(ref_req);
-    correct_requirements(ref_req);
+    build_params(cla, req);
+    correct_requirements(cla, req);
 
-    item = Weapon(ref_cla, ref_par, ref_req);
+    item = Weapon(cla, par, req);
 }
 
 
-void WeaponFactory::correct_params(IParams& params) const {
+void WeaponFactory::correct_params(const IClassifier& classifier, IParams& params) const {
     params.set_exp_param(EExpParams::_level, 0.0);
 }
 
-void WeaponFactory::correct_requirements(IParams& requirements) const {
+void WeaponFactory::correct_requirements(const IClassifier& classifier, IParams& requirements) const {
     requirements.set_life_param(ELifeParams::_hp, 0.0);
     requirements.set_life_param(ELifeParams::_mp, 0.0);
     requirements.set_life_param(ELifeParams::_stamina_pts, 0.0);

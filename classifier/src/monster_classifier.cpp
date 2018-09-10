@@ -3,8 +3,8 @@
 
 MonsterClassifier::MonsterClassifier() :
     IClassifier(),
-    _class( ECreatureClass::_monster ),
-    _type( EMonsterType::_none )
+    _class( CreatureClass::_monster ),
+    _type( MonsterType::_NONE )
 {
 }
 
@@ -26,7 +26,7 @@ int MonsterClassifier::get_type() const {
 
 
 void MonsterClassifier::set_type(int type) {
-    _type = static_cast< EMonsterType >(type);
+    _type = static_cast< MonsterType >(type);
 }
 
 

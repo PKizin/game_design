@@ -8,7 +8,7 @@
 class ArmorClassifier : public IClassifier {
 public:
     ArmorClassifier();
-    ArmorClassifier(EArmorType, EArmorMaterial); 
+    ArmorClassifier(ArmorType, ArmorMaterial); 
     ArmorClassifier(const ArmorClassifier&);
     ArmorClassifier(const IClassifier&);
     virtual ~ArmorClassifier() { }
@@ -23,9 +23,9 @@ public:
     ArmorClassifier& operator=(const ArmorClassifier&);
 
 private:
-    EItemClass _class;
-    EArmorType _type;
-    EArmorMaterial _material;
+    ItemClass _class;
+    ArmorType _type;
+    ArmorMaterial _material;
 };
 
 

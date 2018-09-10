@@ -20,9 +20,9 @@ public:
     JewerlyClassifier& operator=(const JewerlyClassifier&);
 
 private:
-    EItemClass _class;
-    EJewerlyType _type;
-    EJewerlyMaterial _material;
+    ItemClass _class;
+    JewerlyType _type;
+    JewerlyMaterial _material;
 };
 
 
