@@ -13,10 +13,47 @@ void ArmorFactory::build_classifier(IClassifier& classifier) const {
 }
 
 void ArmorFactory::build_params(const IClassifier& classifier, IParams& params) const {
-    
-    // TODO: params must depend on EExpParams::_level
-
     params = Params();
+
+    const auto& armor_type = static_cast< ArmorType >(classifier.get_type());
+    const auto& armor_level = Randomizer::dice_real(1, 10);
+    
+    params.set_exp_param(EExpParams::_level, armor_level);
+
+    const auto& durability = Randomizer::dice_real(40, 100);
+    const auto& max_durability = 100.0;
+
+    params.set_hit_param(EHitParams::_durability, durability);
+    params.set_hit_param(EHitParams::_max_durability, max_durability);
+
+    if (armor_type == ArmorType::_head)
+    {
+
+    }
+    else if (armor_type == ArmorType::_shoulders)
+    {
+
+    }
+    else if (armor_type == ArmorType::_chest)
+    {
+
+    }
+    else if (armor_type == ArmorType::_hands)
+    {
+
+    }
+    else if (armor_type == ArmorType::_belt)
+    {
+
+    }
+    else if (armor_type == ArmorType::_legs)
+    {
+
+    }
+    else if (armor_type == ArmorType::_feet)
+    {
+
+    }
 
     params.set_main_param(EMainParams::_strength, Randomizer::dice_real(0, 5));
     params.set_main_param(EMainParams::_stamina, Randomizer::dice_real(0, 5));
@@ -36,11 +73,6 @@ void ArmorFactory::build_params(const IClassifier& classifier, IParams& params) 
 
     params.set_move_param(EMoveParams::_move_speed, Randomizer::dice_real(50, 150) / 100.0);
     params.set_move_param(EMoveParams::_weight, Randomizer::dice_real(10, 50) / 10.0);
-
-    params.set_exp_param(EExpParams::_level, Randomizer::dice_real(1, 10));
-
-    params.set_hit_param(EHitParams::_durability, Randomizer::dice_real(40, 100));
-    params.set_hit_param(EHitParams::_max_durability, 100.0);
 }
 
 void ArmorFactory::build_item(IItem& item) const {

@@ -2,6 +2,7 @@
 #define WEAPON_FACTORY_H
 
 #include "i_factory.h"
+#include "e_item_categories.h"
 
 
 class WeaponFactory : public IFactory {
@@ -15,8 +16,16 @@ private:
     void build_classifier(IClassifier&) const override;
     void build_params(const IClassifier&, IParams&) const override;
 
-    void correct_params(const IClassifier&, IParams&) const;
-    void correct_requirements(const IClassifier&, IParams&) const;
+    void build_params_stick(float level, WeaponMaterial, WeaponProperty1, IParams&) const;
+    void build_params_dagger(float level, WeaponMaterial, WeaponProperty1, IParams&) const;
+    void build_params_sword(float level, WeaponMaterial, WeaponProperty1, IParams&) const;
+    void build_params_staff(float level, WeaponMaterial, WeaponProperty1, IParams&) const;
+
+    float coeff_material(WeaponMaterial) const;
+    float coeff_property1(WeaponProperty1) const;
+
+    void correct_params(IParams&) const;
+    void correct_requirements(IParams&) const;
 };
 
 
