@@ -77,14 +77,16 @@ void WeaponFactory::build_params(const IClassifier& classifier, IParams& params)
 void WeaponFactory::build_params_stick(float level, WeaponMaterial material, WeaponProperty1 property1, IParams& params) const {
     const auto& coeff_mat = coeff_material(material);
     const auto& coeff_prop1 = coeff_property1(property1);
+    const auto& coeff_mat_inv = 1.0 / coeff_mat;
+    const auto& coeff_prop1_inv = 1.0 / coeff_prop1;
 
-    const auto& strength = Randomizer::dice_real(level, level + 10);
-    const auto& agility = Randomizer::dice_real(level, level + 10);
-    const auto& stamina_pts = Randomizer::dice_real(level, level + 10) * 5.0;
-    const auto& weight = Randomizer::dice_real(30, 50) / 10.0;
-    const auto& atk_speed = Randomizer::dice_real(80, 110) / 100.0;
-    const auto& min_damage = Randomizer::dice_real(level, level + 10);
-    const auto& max_damage = min_damage + Randomizer::dice_real(0, 10);
+    const auto& strength = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10);
+    const auto& agility = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level, level + 10);
+    const auto& stamina_pts = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level, level + 10) * 5.0;
+    const auto& weight = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(30, 50) / 10.0;
+    const auto& atk_speed = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(80, 110) / 100.0;
+    const auto& min_damage = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10);
+    const auto& max_damage = min_damage + (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(0, 10);
 
     params.set_main_param(EMainParams::_strength, strength);
     params.set_main_param(EMainParams::_agility, agility);
@@ -98,13 +100,15 @@ void WeaponFactory::build_params_stick(float level, WeaponMaterial material, Wea
 void WeaponFactory::build_params_dagger(float level, WeaponMaterial material, WeaponProperty1 property1, IParams& params) const {
     const auto& coeff_mat = coeff_material(material);
     const auto& coeff_prop1 = coeff_property1(property1);
+    const auto& coeff_mat_inv = 1.0 / coeff_mat;
+    const auto& coeff_prop1_inv = 1.0 / coeff_prop1;
 
-    const auto& agility = Randomizer::dice_real(level, level + 10);
-    const auto& stamina_ptr = Randomizer::dice_real(level, level + 10) * 3.0;
-    const auto& weight = Randomizer::dice_real(10, 30) / 10.0;
-    const auto& atk_speed = Randomizer::dice_real(120, 150) / 100.0;
-    const auto& min_damage = Randomizer::dice_real(level, level + 10);
-    const auto& max_damage = min_damage + Randomizer::dice_real(0, 10);
+    const auto& agility = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level, level + 10);
+    const auto& stamina_ptr = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level, level + 10) * 3.0;
+    const auto& weight = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(10, 30) / 10.0;
+    const auto& atk_speed = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(120, 150) / 100.0;
+    const auto& min_damage = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10);
+    const auto& max_damage = min_damage + (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(0, 10);
 
     params.set_main_param(EMainParams::_agility, agility);
     params.set_life_param(ELifeParams::_stamina_pts, stamina_ptr);
@@ -117,15 +121,17 @@ void WeaponFactory::build_params_dagger(float level, WeaponMaterial material, We
 void WeaponFactory::build_params_sword(float level, WeaponMaterial material, WeaponProperty1 property1, IParams& params) const {
     const auto& coeff_mat = coeff_material(material);
     const auto& coeff_prop1 = coeff_property1(property1);
+    const auto& coeff_mat_inv = 1.0 / coeff_mat;
+    const auto& coeff_prop1_inv = 1.0 / coeff_prop1;
 
-    const auto& agility = Randomizer::dice_real(level, level + 10);
-    const auto& stamina_ptr = Randomizer::dice_real(level, level + 10) * 7.0;
-    const auto& weight = Randomizer::dice_real(30, 70) / 10.0;
-    const auto& atk_speed = Randomizer::dice_real(70, 100) / 100.0;
-    const auto& min_damage = Randomizer::dice_real(level, level + 10);
-    const auto& max_damage = min_damage + Randomizer::dice_real(0, 10);
+    const auto& strength = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10);
+    const auto& stamina_ptr = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level, level + 10) * 7.0;
+    const auto& weight = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(30, 70) / 10.0;
+    const auto& atk_speed = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(70, 100) / 100.0;
+    const auto& min_damage = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10);
+    const auto& max_damage = min_damage + (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(0, 10);
 
-    params.set_main_param(EMainParams::_strength, agility);
+    params.set_main_param(EMainParams::_strength, strength);
     params.set_life_param(ELifeParams::_stamina_pts, stamina_ptr);
     params.set_move_param(EMoveParams::_weight, weight);
     params.set_hit_param(EHitParams::_atk_speed, atk_speed);
@@ -134,16 +140,18 @@ void WeaponFactory::build_params_sword(float level, WeaponMaterial material, Wea
 }
 
 void WeaponFactory::build_params_staff(float level, WeaponMaterial material, WeaponProperty1 property1, IParams& params) const {
-    const auto& coeff_matl = coeff_material(material);
+    const auto& coeff_mat = coeff_material(material);
     const auto& coeff_prop1 = coeff_property1(property1);
+    const auto& coeff_mat_inv = 1.0 / coeff_mat;
+    const auto& coeff_prop1_inv = 1.0 / coeff_prop1;
 
-    const auto& mind = Randomizer::dice_real(level, level + 10);
-    const auto& will = Randomizer::dice_real(level, level + 10);
-    const auto& mp = Randomizer::dice_real(level, level + 10) * 5.0;
-    const auto& weight = Randomizer::dice_real(40, 80) / 10.0;
-    const auto& atk_speed = Randomizer::dice_real(30, 50) / 100.0;
-    const auto& min_damage = Randomizer::dice_real(level, level + 10) * 2.0;
-    const auto& max_damage = min_damage + Randomizer::dice_real(0, 10);
+    const auto& mind = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10);
+    const auto& will = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10);
+    const auto& mp = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10) * 5.0;
+    const auto& weight = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(40, 80) / 10.0;
+    const auto& atk_speed = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(30, 50) / 100.0;
+    const auto& min_damage = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10) * 2.0;
+    const auto& max_damage = min_damage + (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(0, 10);
 
     params.set_main_param(EMainParams::_mind, mind);
     params.set_main_param(EMainParams::_will, will);
@@ -158,11 +166,11 @@ float WeaponFactory::coeff_material(WeaponMaterial material) const {
     auto coeff = 1.0;
     if (material == WeaponMaterial::_wood) 
     {
-        coeff = 0.5;
+        coeff = 0.8;
     }
     else if (material == WeaponMaterial::_glass)
     {
-        coeff = 0.8;
+        coeff = 0.9;
     }
     return coeff;
 }
@@ -171,7 +179,7 @@ float WeaponFactory::coeff_property1(WeaponProperty1 property1) const {
     auto coeff = 1.0;
     if (property1 == WeaponProperty1::_one_handed)
     {
-        coeff = 0.5;
+        coeff = 0.75;
     }
     return coeff;
 }
