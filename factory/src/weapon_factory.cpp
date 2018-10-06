@@ -80,11 +80,11 @@ void WeaponFactory::build_params_stick(float level, WeaponMaterial material, Wea
     const auto& coeff_mat_inv = 1.0 / coeff_mat;
     const auto& coeff_prop1_inv = 1.0 / coeff_prop1;
 
-    const auto& strength = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10);
-    const auto& agility = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level, level + 10);
-    const auto& stamina_pts = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level, level + 10) * 5.0;
+    const auto& strength = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 3);
+    const auto& agility = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level, level + 3);
+    const auto& stamina_pts = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level, level + 10) * 0.5;
     const auto& weight = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(30, 50) / 10.0;
-    const auto& atk_speed = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(80, 110) / 100.0;
+    const auto& atk_speed = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level + 80, level + 110) / 100.0;
     const auto& min_damage = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10);
     const auto& max_damage = min_damage + (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(0, 10);
 
@@ -103,15 +103,15 @@ void WeaponFactory::build_params_dagger(float level, WeaponMaterial material, We
     const auto& coeff_mat_inv = 1.0 / coeff_mat;
     const auto& coeff_prop1_inv = 1.0 / coeff_prop1;
 
-    const auto& agility = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level, level + 10);
-    const auto& stamina_ptr = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level, level + 10) * 3.0;
+    const auto& agility = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level, level + 3);
+    const auto& stamina_pts = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level, level + 10) * 0.3;
     const auto& weight = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(10, 30) / 10.0;
-    const auto& atk_speed = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(120, 150) / 100.0;
+    const auto& atk_speed = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level + 120, level + 150) / 100.0;
     const auto& min_damage = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10);
     const auto& max_damage = min_damage + (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(0, 10);
 
     params.set_main_param(EMainParams::_agility, agility);
-    params.set_life_param(ELifeParams::_stamina_pts, stamina_ptr);
+    params.set_life_param(ELifeParams::_stamina_pts, stamina_pts);
     params.set_move_param(EMoveParams::_weight, weight);
     params.set_hit_param(EHitParams::_atk_speed, atk_speed);
     params.set_hit_param(EHitParams::_min_damage, min_damage);
@@ -124,15 +124,15 @@ void WeaponFactory::build_params_sword(float level, WeaponMaterial material, Wea
     const auto& coeff_mat_inv = 1.0 / coeff_mat;
     const auto& coeff_prop1_inv = 1.0 / coeff_prop1;
 
-    const auto& strength = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10);
-    const auto& stamina_ptr = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level, level + 10) * 7.0;
+    const auto& strength = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 3);
+    const auto& stamina_pts = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level, level + 10) * 0.7;
     const auto& weight = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(30, 70) / 10.0;
-    const auto& atk_speed = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(70, 100) / 100.0;
+    const auto& atk_speed = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level + 70, level + 100) / 100.0;
     const auto& min_damage = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10);
     const auto& max_damage = min_damage + (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(0, 10);
 
     params.set_main_param(EMainParams::_strength, strength);
-    params.set_life_param(ELifeParams::_stamina_pts, stamina_ptr);
+    params.set_life_param(ELifeParams::_stamina_pts, stamina_pts);
     params.set_move_param(EMoveParams::_weight, weight);
     params.set_hit_param(EHitParams::_atk_speed, atk_speed);
     params.set_hit_param(EHitParams::_min_damage, min_damage);
@@ -145,11 +145,11 @@ void WeaponFactory::build_params_staff(float level, WeaponMaterial material, Wea
     const auto& coeff_mat_inv = 1.0 / coeff_mat;
     const auto& coeff_prop1_inv = 1.0 / coeff_prop1;
 
-    const auto& mind = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10);
-    const auto& will = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10);
-    const auto& mp = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10) * 5.0;
+    const auto& mind = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 3);
+    const auto& will = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 3);
+    const auto& mp = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10) * 0.5;
     const auto& weight = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(40, 80) / 10.0;
-    const auto& atk_speed = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(30, 50) / 100.0;
+    const auto& atk_speed = (coeff_mat_inv) * (coeff_prop1_inv) * Randomizer::dice_real(level + 30, level + 50) / 100.0;
     const auto& min_damage = (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(level, level + 10) * 2.0;
     const auto& max_damage = min_damage + (coeff_mat) * (coeff_prop1) * Randomizer::dice_real(0, 10);
 
@@ -186,12 +186,14 @@ float WeaponFactory::coeff_property1(WeaponProperty1 property1) const {
 
 void WeaponFactory::correct_params(IParams& params) const {
     params.set_exp_param(EExpParams::_level, 0.0);
+
+    params.set_life_param(ELifeParams::_hp, 0.0);
+    params.set_life_param(ELifeParams::_mp, 0.0);
+    params.set_life_param(ELifeParams::_stamina_pts, 0.0);
 }
 
 void WeaponFactory::correct_requirements(IParams& requirements) const {
     requirements.set_life_param(ELifeParams::_hp, 0.0);
-    requirements.set_life_param(ELifeParams::_mp, 0.0);
-    requirements.set_life_param(ELifeParams::_stamina_pts, 0.0);
     requirements.set_life_param(ELifeParams::_phys_protection, 0.0);
     requirements.set_life_param(ELifeParams::_mag_protection, 0.0);
     requirements.set_life_param(ELifeParams::_max_hp, 0.0);

@@ -24,10 +24,10 @@ int main() {
     IItem& item2 = armor;
 
     factory1.build_item(item1);
-    //factory2.build_item(item2);
+    factory2.build_item(item2);
 
     item1.print();
-    //item2.print();
+    item2.print();
     
     return 0;
 }

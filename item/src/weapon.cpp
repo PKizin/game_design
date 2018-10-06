@@ -58,14 +58,16 @@ void Weapon::print() const {
     const std::vector< std::string > material_tags = { "none", "wood", "steel", "glass" };
     const std::vector< std::string > property1_tags = { "none", "one-handed", "two-handed" };
 
-    const auto& min_damage = static_cast<int>(_params.get_hit_param(EHitParams::_min_damage));
-    const auto& max_damage = static_cast<int>(_params.get_hit_param(EHitParams::_max_damage));
     const auto& cur_durability = static_cast<int>(_params.get_hit_param(EHitParams::_durability));
     const auto& max_durability = static_cast<int>(_params.get_hit_param(EHitParams::_max_durability));
+    const auto& min_damage = static_cast<int>(_params.get_hit_param(EHitParams::_min_damage));
+    const auto& max_damage = static_cast<int>(_params.get_hit_param(EHitParams::_max_damage));
     const auto& atk_speed = _params.get_hit_param(EHitParams::_atk_speed);
     const auto& weight = _params.get_move_param(EMoveParams::_weight);
 
     const auto& level = static_cast<int>(_requirements.get_exp_param(EExpParams::_level));
+    const auto& mp = static_cast<int>(_requirements.get_life_param(ELifeParams::_mp));
+    const auto& stamina_pts = static_cast<int>(_requirements.get_life_param(ELifeParams::_stamina_pts));
     const auto& strength = static_cast<int>(_requirements.get_main_param(EMainParams::_strength));
     const auto& stamina = static_cast<int>(_requirements.get_main_param(EMainParams::_stamina));
     const auto& agility = static_cast<int>(_requirements.get_main_param(EMainParams::_agility));
@@ -74,6 +76,7 @@ void Weapon::print() const {
     const auto& luck = static_cast<int>(_requirements.get_main_param(EMainParams::_luck));
 
 
+    std::cout << end_line;
     std::cout << "+--------------+" << end_line;
     std::cout << "|     item     |" << end_line;
     std::cout << "+--------------+" << end_line;
@@ -91,19 +94,23 @@ void Weapon::print() const {
     std::cout << tab << "weight     : " << weight << end_section;
     
     std::cout << "requirements:" << end_line;
-    std::cout << tab << "level    : " << level << end_line;
+    std::cout << tab << "level       : " << level << end_line;
+    if (mp)
+        std::cout << tab << "mp          : " << mp << end_line;
+    if (stamina_pts)
+        std::cout << tab << "stamina pts : " << stamina_pts << end_line;
     if (strength)
-        std::cout << tab << "strength : " << strength << end_line;
+        std::cout << tab << "strength    : " << strength << end_line;
     if (stamina)
-        std::cout << tab << "stamina  : " << stamina << end_line;
+        std::cout << tab << "stamina     : " << stamina << end_line;
     if (agility)
-        std::cout << tab << "agility  : " << agility << end_line;
+        std::cout << tab << "agility     : " << agility << end_line;
     if (mind)
-        std::cout << tab << "mind     : " << mind << end_line;
+        std::cout << tab << "mind        : " << mind << end_line;
     if (will)
-        std::cout << tab << "will     : " << will << end_line;
+        std::cout << tab << "will        : " << will << end_line;
     if (luck)
-        std::cout << tab << "luck     : " << luck << end_section;
+        std::cout << tab << "luck        : " << luck << end_section;
 }
 
 
