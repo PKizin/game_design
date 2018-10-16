@@ -1,11 +1,11 @@
 #include <iostream>
-#include "weapon_classifier.h"
-#include "weapon_factory.h"
-#include "weapon.h"
-#include "armor_classifier.h"
-#include "armor_factory.h"
-#include "armor.h"
-#include "randomizer.h"
+#include "weapon_classifier.hpp"
+#include "weapon_factory.hpp"
+#include "weapon.hpp"
+#include "armor_classifier.hpp"
+#include "armor_factory.hpp"
+#include "armor.hpp"
+#include "randomizer.hpp"
 using namespace std;
 
 int main() {

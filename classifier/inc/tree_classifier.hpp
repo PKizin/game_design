@@ -1,8 +1,8 @@
 #ifndef TREE_CLASSIFIER_H
 #define TREE_CLASSIFIER_H
 
-#include "i_classifier.h"
-#include "e_obstacle_categories.h"
+#include "i_classifier.hpp"
+#include "e_obstacle_categories.hpp"
 
 
 class TreeClassifier : public IClassifier {

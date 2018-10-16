@@ -1,4 +1,4 @@
-#include "jewerly_classifier.h"
+#include "jewerly_classifier.hpp"
 
 
 JewerlyClassifier::JewerlyClassifier() :

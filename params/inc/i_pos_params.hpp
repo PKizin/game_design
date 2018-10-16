@@ -1,7 +1,7 @@
 #ifndef I_POS_PARAMS_H
 #define I_POS_PARAMS_H
 
-#include "e_params_categories.h"
+#include "e_params_categories.hpp"
 
 
 class IPosParams {

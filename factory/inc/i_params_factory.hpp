@@ -1,8 +1,8 @@
 #ifndef I_PARAMS_FACTORY_H
 #define I_PARAMS_FACTORY_H
 
-#include "i_params.h"
-#include "i_classifier.h"
+#include "i_params.hpp"
+#include "i_classifier.hpp"
 
 
 class IParamsFactory {

@@ -1,11 +1,11 @@
 #ifndef I_FACTORY_H
 #define I_FACTORY_H
 
-#include "i_classifier_factory.h"
-#include "i_params_factory.h"
-#include "i_creature_factory.h"
-#include "i_item_factory.h"
-#include "i_obstacle_factory.h"
+#include "i_classifier_factory.hpp"
+#include "i_params_factory.hpp"
+#include "i_creature_factory.hpp"
+#include "i_item_factory.hpp"
+#include "i_obstacle_factory.hpp"
 
 
 class IFactory : public IClassifierFactory, public IParamsFactory, public ICreatureFactory, public IItemFactory, public IObstacleFactory {

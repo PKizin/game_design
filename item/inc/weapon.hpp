@@ -1,9 +1,9 @@
 #ifndef WEAPON_H
 #define WEAPON_H
 
-#include "i_item.h"
-#include "weapon_classifier.h"
-#include "params.h"
+#include "i_item.hpp"
+#include "weapon_classifier.hpp"
+#include "params.hpp"
 
 
 class Weapon : public IItem {

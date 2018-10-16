@@ -1,9 +1,9 @@
 #ifndef ARMOR_H
 #define ARMOR_H
 
-#include "i_item.h"
-#include "armor_classifier.h"
-#include "params.h"
+#include "i_item.hpp"
+#include "armor_classifier.hpp"
+#include "params.hpp"
 
 
 class Armor : public IItem {

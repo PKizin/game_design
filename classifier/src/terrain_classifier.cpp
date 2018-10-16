@@ -1,4 +1,4 @@
-#include "terrain_classifier.h"
+#include "terrain_classifier.hpp"
 
 
 TerrainClassifier::TerrainClassifier() :

@@ -1,4 +1,4 @@
-#include "weapon_classifier.h"
+#include "weapon_classifier.hpp"
 
 
 WeaponClassifier::WeaponClassifier() :

@@ -1,7 +1,7 @@
 #ifndef I_LIFE_PARAMS_H
 #define I_LIFE_PARAMS_H
 
-#include "e_params_categories.h"
+#include "e_params_categories.hpp"
 
 
 class ILifeParams {

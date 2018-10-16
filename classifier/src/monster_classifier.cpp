@@ -1,4 +1,4 @@
-#include "monster_classifier.h"
+#include "monster_classifier.hpp"
 
 
 MonsterClassifier::MonsterClassifier() :

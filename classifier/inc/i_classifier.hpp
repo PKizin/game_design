@@ -1,10 +1,10 @@
 #ifndef I_CLASSIFIER_H
 #define I_CLASSIFIER_H
 
-#include "i_class_classifier.h"
-#include "i_type_classifier.h"
-#include "i_material_classifier.h"
-#include "i_property_classifier.h"
+#include "i_class_classifier.hpp"
+#include "i_type_classifier.hpp"
+#include "i_material_classifier.hpp"
+#include "i_property_classifier.hpp"
 
 #include <iostream>
 #include <typeinfo>

@@ -1,4 +1,4 @@
-#include "potion_classifier.h"
+#include "potion_classifier.hpp"
 
 
 PotionClassifier::PotionClassifier() :

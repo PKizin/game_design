@@ -1,8 +1,8 @@
-#include "armor_factory.h"
-#include "armor_classifier.h"
-#include "armor.h"
-#include "params.h"
-#include "randomizer.h"
+#include "armor_factory.hpp"
+#include "armor_classifier.hpp"
+#include "armor.hpp"
+#include "params.hpp"
+#include "randomizer.hpp"
 
 
 void ArmorFactory::build_item(IItem& item) const {

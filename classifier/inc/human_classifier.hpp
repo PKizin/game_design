@@ -1,8 +1,8 @@
 #ifndef HUMAN_CLASSIFIER_H
 #define HUMAN_CLASSIFIER_H
 
-#include "i_classifier.h"
-#include "e_creature_categories.h"
+#include "i_classifier.hpp"
+#include "e_creature_categories.hpp"
 
 
 class HumanClassifier : public IClassifier  {

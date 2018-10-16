@@ -1,4 +1,4 @@
-#include "randomizer.h"
+#include "randomizer.hpp"
 #include <cstdlib>
 #include <ctime>
 

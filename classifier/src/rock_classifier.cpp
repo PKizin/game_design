@@ -1,4 +1,4 @@
-#include "rock_classifier.h"
+#include "rock_classifier.hpp"
 
 
 RockClassifier::RockClassifier() :

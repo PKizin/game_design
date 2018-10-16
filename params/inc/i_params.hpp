@@ -1,12 +1,12 @@
 #ifndef I_PARAMS_H
 #define I_PARAMS_H
 
-#include "i_main_params.h"
-#include "i_life_params.h"
-#include "i_move_params.h"
-#include "i_exp_params.h"
-#include "i_hit_params.h"
-#include "i_pos_params.h"
+#include "i_main_params.hpp"
+#include "i_life_params.hpp"
+#include "i_move_params.hpp"
+#include "i_exp_params.hpp"
+#include "i_hit_params.hpp"
+#include "i_pos_params.hpp"
 
 #include <iostream>
 #include <typeinfo>

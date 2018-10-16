@@ -1,8 +1,8 @@
 #ifndef MONSTER_CLASSIFIER_H
 #define MONSTER_CLASSIFIER_H
 
-#include "i_classifier.h"
-#include "e_creature_categories.h"
+#include "i_classifier.hpp"
+#include "e_creature_categories.hpp"
 
 
 class MonsterClassifier : public IClassifier {

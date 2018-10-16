@@ -1,8 +1,8 @@
 #ifndef I_OBJECT_H
 #define I_OBJECT_H
 
-#include "i_classifier.h"
-#include "i_params.h"
+#include "i_classifier.hpp"
+#include "i_params.hpp"
 
 
 class IObject {

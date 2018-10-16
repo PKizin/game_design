@@ -1,8 +1,8 @@
 #ifndef ARMOR_FACTORY_H
 #define ARMOR_FACTORY_H
 
-#include "i_factory.h"
-#include "e_item_categories.h"
+#include "i_factory.hpp"
+#include "e_item_categories.hpp"
 
 
 class ArmorFactory : public IFactory {

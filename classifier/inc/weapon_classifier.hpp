@@ -1,8 +1,8 @@
 #ifndef WEAPON_CLASSIFIER_H
 #define WEAPON_CLASSIFIER_H
 
-#include "i_classifier.h"
-#include "e_item_categories.h"
+#include "i_classifier.hpp"
+#include "e_item_categories.hpp"
 
 
 class WeaponClassifier : public IClassifier {

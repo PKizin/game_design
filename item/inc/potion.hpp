@@ -1,9 +1,9 @@
 #ifndef POTION_H
 #define POTION_H
 
-#include "i_item.h"
-#include "potion_classifier.h"
-#include "params.h"
+#include "i_item.hpp"
+#include "potion_classifier.hpp"
+#include "params.hpp"
 
 
 class Potion : public IItem {

@@ -1,7 +1,7 @@
 #ifndef I_CLASSIFIER_FACTORY_H
 #define I_CLASSIFIER_FACTORY_H
 
-#include "i_classifier.h"
+#include "i_classifier.hpp"
 
 
 class IClassifierFactory {

@@ -1,8 +1,8 @@
 #ifndef I_ITEM_H
 #define I_ITEM_H
 
-#include "i_object.h"
-#include "i_durable_item.h"
+#include "i_object.hpp"
+#include "i_durable_item.hpp"
 
 
 class IItem : public IObject, public IDurableItem {

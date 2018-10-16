@@ -1,7 +1,7 @@
 #ifndef PARAMS_H
 #define PARAMS_H
 
-#include "i_params.h"
+#include "i_params.hpp"
 #include <map>
 
 

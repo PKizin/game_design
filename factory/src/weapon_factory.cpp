@@ -1,8 +1,8 @@
-#include "weapon_factory.h"
-#include "weapon_classifier.h"
-#include "weapon.h"
-#include "params.h"
-#include "randomizer.h"
+#include "weapon_factory.hpp"
+#include "weapon_classifier.hpp"
+#include "weapon.hpp"
+#include "params.hpp"
+#include "randomizer.hpp"
 
 
 void WeaponFactory::build_item(IItem& item) const {

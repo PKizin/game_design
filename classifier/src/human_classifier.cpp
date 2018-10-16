@@ -1,4 +1,4 @@
-#include "human_classifier.h"
+#include "human_classifier.hpp"
 
 
 HumanClassifier::HumanClassifier() :
