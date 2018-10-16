@@ -1,5 +1,4 @@
 #include "weapon_classifier.h"
-#include <iostream>
 
 
 WeaponClassifier::WeaponClassifier() :

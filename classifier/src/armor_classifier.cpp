@@ -1,5 +1,4 @@
 #include "armor_classifier.h"
-#include <iostream>
 
 
 ArmorClassifier::ArmorClassifier() : 
