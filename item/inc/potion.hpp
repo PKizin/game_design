@@ -8,7 +8,7 @@
 
 class Potion : public IItem {
 public:
-    Potion();
+    Potion() { }
     Potion(const IClassifier&, const IParams&, const IParams&);
     virtual ~Potion() { }
 
