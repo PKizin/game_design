@@ -30,7 +30,8 @@
                 "${workspaceFolder}/classifier/inc",
                 "${workspaceFolder}/params/inc",
                 "${workspaceFolder}/item/inc",
-                "${workspaceFolder}/factory/inc"
+                "${workspaceFolder}/factory/inc",
+                "C:/Program Files (x86)/PostgreSQL/10/include"
             ],
             "defines": [
                 "_DEBUG",
