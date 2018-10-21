@@ -4,12 +4,13 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/object",
-                "${workspaceFolder}/random",
-                "${workspaceFolder}/classifier/inc",
-                "${workspaceFolder}/params/inc",
-                "${workspaceFolder}/item/inc",
-                "${workspaceFolder}/factory/inc"
+                "${workspaceFolder}/domain/object",
+                "${workspaceFolder}/domain/random",
+                "${workspaceFolder}/domain/classifier/inc",
+                "${workspaceFolder}/domain/params/inc",
+                "${workspaceFolder}/domain/item/inc",
+                "${workspaceFolder}/domain/factory/inc",
+                "${workspaceFolder}/database"
             ],
             "defines": [
                 "_DEBUG",
@@ -25,12 +26,13 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/object",
-                "${workspaceFolder}/random",
-                "${workspaceFolder}/classifier/inc",
-                "${workspaceFolder}/params/inc",
-                "${workspaceFolder}/item/inc",
-                "${workspaceFolder}/factory/inc",
+                "${workspaceFolder}/domain/object",
+                "${workspaceFolder}/domain/random",
+                "${workspaceFolder}/domain/classifier/inc",
+                "${workspaceFolder}/domain/params/inc",
+                "${workspaceFolder}/domain/item/inc",
+                "${workspaceFolder}/domain/factory/inc",
+                "${workspaceFolder}/database",
                 "C:/Program Files (x86)/PostgreSQL/10/include"
             ],
             "defines": [
@@ -38,7 +40,7 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
+            "compilerPath": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-win32-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe",
             "cStandard": "c11",
             "cppStandard": "c++14",
             "intelliSenseMode": "clang-x64"

@@ -40,7 +40,9 @@
         "ctime": "cpp",
         "memory": "cpp",
         "chrono": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "optional": "cpp",
+        "string_view": "cpp"
     },
     "files.exclude": {
         "*.exe": true,

@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 #set(CMAKE_VERBOSE_MAKEFILE true)
 
 project(my_game)
@@ -25,20 +27,22 @@ find_package(PostgreSQL REQUIRED)
 
 file(GLOB SOURCES
     *.cpp
-    random/*.cpp
-    classifier/src/*.cpp
-    params/src/*.cpp
-    item/src/*.cpp
-    factory/src/*.cpp
+    domain/random/*.cpp
+    domain/classifier/src/*.cpp
+    domain/params/src/*.cpp
+    domain/item/src/*.cpp
+    domain/factory/src/*.cpp
+    database/*.cpp
 )
 
 include_directories(
-    object
-    random
-    classifier/inc
-    params/inc
-    item/inc
-    factory/inc
+    domain/object
+    domain/random
+    domain/classifier/inc
+    domain/params/inc
+    domain/item/inc
+    domain/factory/inc
+    database/
     ${PostgreSQL_INCLUDE_DIR}
 )
 
