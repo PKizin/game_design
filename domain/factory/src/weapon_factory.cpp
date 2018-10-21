@@ -184,29 +184,29 @@ float WeaponFactory::coeff_property1(WeaponProperty1 property1) const {
     return coeff;
 }
 
-void WeaponFactory::correct_params(IParams& params) const {
-    params.set_exp_param(EExpParams::_level, 0.0);
+void WeaponFactory::correct_params(IParams& par) const {
+    par.set_exp_param(EExpParams::_level, 0.0);
 
-    params.set_life_param(ELifeParams::_hp, 0.0);
-    params.set_life_param(ELifeParams::_mp, 0.0);
-    params.set_life_param(ELifeParams::_stamina_pts, 0.0);
+    par.set_life_param(ELifeParams::_hp, 0.0);
+    par.set_life_param(ELifeParams::_mp, 0.0);
+    par.set_life_param(ELifeParams::_stamina_pts, 0.0);
 }
 
-void WeaponFactory::correct_requirements(IParams& requirements) const {
-    requirements.set_life_param(ELifeParams::_hp, 0.0);
-    requirements.set_life_param(ELifeParams::_phys_protection, 0.0);
-    requirements.set_life_param(ELifeParams::_mag_protection, 0.0);
-    requirements.set_life_param(ELifeParams::_max_hp, 0.0);
-    requirements.set_life_param(ELifeParams::_max_mp, 0.0);
-    requirements.set_life_param(ELifeParams::_max_stamina_pts, 0.0);
+void WeaponFactory::correct_requirements(IParams& req) const {
+    req.set_life_param(ELifeParams::_hp, 0.0);
+    req.set_life_param(ELifeParams::_phys_protection, 0.0);
+    req.set_life_param(ELifeParams::_mag_protection, 0.0);
+    req.set_life_param(ELifeParams::_max_hp, 0.0);
+    req.set_life_param(ELifeParams::_max_mp, 0.0);
+    req.set_life_param(ELifeParams::_max_stamina_pts, 0.0);
 
-    requirements.set_move_param(EMoveParams::_move_speed, 0.0);
-    requirements.set_move_param(EMoveParams::_weight, 0.0);
+    req.set_move_param(EMoveParams::_move_speed, 0.0);
+    req.set_move_param(EMoveParams::_weight, 0.0);
 
-    requirements.set_hit_param(EHitParams::_atk_speed, 0.0);
-    requirements.set_hit_param(EHitParams::_min_damage, 0.0);
-    requirements.set_hit_param(EHitParams::_max_damage, 0.0);
-    requirements.set_hit_param(EHitParams::_durability, 0.0);
-    requirements.set_hit_param(EHitParams::_max_durability, 0.0);
+    req.set_hit_param(EHitParams::_atk_speed, 0.0);
+    req.set_hit_param(EHitParams::_min_damage, 0.0);
+    req.set_hit_param(EHitParams::_max_damage, 0.0);
+    req.set_hit_param(EHitParams::_durability, 0.0);
+    req.set_hit_param(EHitParams::_max_durability, 0.0);
 }
 

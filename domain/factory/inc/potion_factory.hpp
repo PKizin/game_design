@@ -16,9 +16,9 @@ private:
     void build_classifier(IClassifier&) const override;
     void build_params(const IClassifier&, IParams&) const override;
 
-    void build_params_hp(float level, PotionProperty1, IParams&) const;
-    void build_params_mp(float level, PotionProperty1, IParams&) const;
-    void build_params_exp(float level, PotionProperty1, IParams&) const;
+    void build_params_hp(PotionProperty1, IParams&) const;
+    void build_params_mp(PotionProperty1, IParams&) const;
+    void build_params_exp(PotionProperty1, IParams&) const;
 
     float coeff_property1(PotionProperty1) const;
 
