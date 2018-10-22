@@ -23,7 +23,7 @@ private:
     float coeff_property1(PotionProperty1) const;
 
     void correct_params(IParams&) const;
-    void correct_requiremets(IParams&) const;
+    void correct_requirements(IParams&) const;
 };
 
 

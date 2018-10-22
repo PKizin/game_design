@@ -52,15 +52,21 @@ void PotionFactory::build_params(const IClassifier& classifier, IParams& params)
 }
 
 void PotionFactory::build_params_hp(PotionProperty1 prop1, IParams& params) const {
-
+    const auto& coeff_prop1 = coeff_property1(prop1);
+    const auto& hp = (coeff_prop1) * 100;
+    params.set_life_param(ELifeParams::_hp, hp);
 }
 
 void PotionFactory::build_params_mp(PotionProperty1 prop1, IParams& params) const {
-
+    const auto& coeff_prop1 = coeff_property1(prop1);
+    const auto& mp = (coeff_prop1) * 100;
+    params.set_life_param(ELifeParams::_mp, mp);
 }
 
 void PotionFactory::build_params_exp(PotionProperty1 prop1, IParams& params) const {
-
+    const auto& coeff_prop1 = coeff_property1(prop1);
+    const auto& ex = (coeff_prop1) * 100;
+    params.set_exp_param(EExpParams::_exp, ex);
 }
 
 float PotionFactory::coeff_property1(PotionProperty1 prop1) const {

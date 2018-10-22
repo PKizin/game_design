@@ -48,6 +48,35 @@ void Potion::repair()
 
 void Potion::print() const
 {
+    const auto& tab = '\t';
+    const auto& end_line = '\n';
+    const auto& end_section = "\n\n";
+
+    const std::vector< std::string > class_tags = { "none", "weapon", "armor", "jewerly", "potion" };
+    const std::vector< std::string > type_tags = { "none", "hp", "mp", "exp" };
+    const std::vector< std::string > property1_tags = { "none", "small", "medium", "big" };
+
+    const auto& hp = static_cast<int>(_params.get_life_param(ELifeParams::_hp));
+    const auto& mp = static_cast<int>(_params.get_life_param(ELifeParams::_mp));
+    const auto& ex = static_cast<int>(_params.get_exp_param(EExpParams::_exp));
+
+    std::cout << end_line;
+    std::cout << "+--------------+" << end_line;
+    std::cout << "|     item     |" << end_line;
+    std::cout << "+--------------+" << end_line;
+
+    std::cout << "classifier:" << end_line;
+    std::cout << tab << "class     : " << class_tags[ _classifier.get_class() ] << end_line;
+    std::cout << tab << "type      : " << type_tags[ _classifier.get_type() ] << end_line;
+    std::cout << tab << "property1 : " << property1_tags[ _classifier.get_property1() ] << end_section;
+
+    std::cout << "params:" << end_line;
+    if (hp)
+        std::cout << tab << "hp : +" << hp << end_line;
+    if (mp)
+        std::cout << tab << "mp : +" << mp << end_line;
+    if (ex)
+        std::cout << tab << "exp : +" << ex << end_line;
 }
 
 
