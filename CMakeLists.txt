@@ -29,6 +29,7 @@ file(GLOB SOURCES
     *.cpp
     domain/random/*.cpp
     domain/classifier/src/*.cpp
+    domain/creature/src/*.cpp
     domain/params/src/*.cpp
     domain/item/src/*.cpp
     domain/factory/src/*.cpp
@@ -39,6 +40,7 @@ include_directories(
     domain/object
     domain/random
     domain/classifier/inc
+    domain/creature/inc
     domain/params/inc
     domain/item/inc
     domain/factory/inc

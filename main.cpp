@@ -11,6 +11,7 @@
 #include "potion.hpp"
 #include "randomizer.hpp"
 #include "pg_tester.hpp"
+#include "i_action.hpp"
 using namespace std;
 
 int main() {
