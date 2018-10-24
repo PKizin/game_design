@@ -12,6 +12,7 @@
 #include "randomizer.hpp"
 #include "pg_tester.hpp"
 #include "i_action.hpp"
+#include "e_body_containers.hpp"
 using namespace std;
 
 int main() {

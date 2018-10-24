@@ -10,6 +10,7 @@
                 "${workspaceFolder}/domain/creature/inc",
                 "${workspaceFolder}/domain/params/inc",
                 "${workspaceFolder}/domain/item/inc",
+                "${workspaceFolder}/domain/item_container/inc",
                 "${workspaceFolder}/domain/factory/inc",
                 "${workspaceFolder}/database"
             ],
@@ -33,6 +34,7 @@
                 "${workspaceFolder}/domain/creature/inc",
                 "${workspaceFolder}/domain/params/inc",
                 "${workspaceFolder}/domain/item/inc",
+                "${workspaceFolder}/domain/item_container/inc",
                 "${workspaceFolder}/domain/factory/inc",
                 "${workspaceFolder}/database",
                 "C:/Program Files (x86)/PostgreSQL/10/include"

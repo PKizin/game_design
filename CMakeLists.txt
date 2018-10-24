@@ -32,6 +32,7 @@ file(GLOB SOURCES
     domain/creature/src/*.cpp
     domain/params/src/*.cpp
     domain/item/src/*.cpp
+    domain/item_container/*.cpp
     domain/factory/src/*.cpp
     database/*.cpp
 )
@@ -43,6 +44,7 @@ include_directories(
     domain/creature/inc
     domain/params/inc
     domain/item/inc
+    domain/item_container/inc
     domain/factory/inc
     database/
     ${PostgreSQL_INCLUDE_DIR}
