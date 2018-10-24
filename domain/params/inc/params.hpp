@@ -1,5 +1,5 @@
-#ifndef PARAMS_H
-#define PARAMS_H
+#ifndef PARAMS_HPP
+#define PARAMS_HPP
 
 #include "i_params.hpp"
 #include <map>
@@ -40,4 +40,4 @@ private:
 };
 
 
-#endif // PARAMS_H
+#endif // PARAMS_HPP

@@ -1,5 +1,5 @@
-#ifndef I_PARAMS_H
-#define I_PARAMS_H
+#ifndef I_PARAMS_HPP
+#define I_PARAMS_HPP
 
 #include "i_main_params.hpp"
 #include "i_life_params.hpp"
@@ -37,4 +37,4 @@ protected:
 };
 
 
-#endif // I_PARAMS_H
+#endif // I_PARAMS_HPP

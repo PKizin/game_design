@@ -1,5 +1,5 @@
-#ifndef I_LIFE_PARAMS_H
-#define I_LIFE_PARAMS_H
+#ifndef I_LIFE_PARAMS_HPP
+#define I_LIFE_PARAMS_HPP
 
 #include "e_params_categories.hpp"
 
@@ -15,4 +15,4 @@ protected:
 };
 
 
-#endif // I_LIFE_PARAMS_H
+#endif // I_LIFE_PARAMS_HPP

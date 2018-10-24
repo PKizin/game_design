@@ -1,5 +1,5 @@
-#ifndef TREE_CLASSIFIER_H
-#define TREE_CLASSIFIER_H
+#ifndef TREE_CLASSIFIER_HPP
+#define TREE_CLASSIFIER_HPP
 
 #include "i_classifier.hpp"
 #include "e_obstacle_categories.hpp"
@@ -23,4 +23,4 @@ private:
 };
 
 
-#endif // TREE_CLASSIFIER_H
+#endif // TREE_CLASSIFIER_HPP

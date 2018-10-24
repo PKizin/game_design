@@ -1,5 +1,5 @@
-#ifndef POTION_H
-#define POTION_H
+#ifndef POTION_HPP
+#define POTION_HPP
 
 #include "i_item.hpp"
 #include "potion_classifier.hpp"
@@ -34,4 +34,4 @@ private:
 };
 
 
-#endif // POTION_H
+#endif // POTION_HPP

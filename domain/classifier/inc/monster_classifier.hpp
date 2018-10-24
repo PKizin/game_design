@@ -1,5 +1,5 @@
-#ifndef MONSTER_CLASSIFIER_H
-#define MONSTER_CLASSIFIER_H
+#ifndef MONSTER_CLASSIFIER_HPP
+#define MONSTER_CLASSIFIER_HPP
 
 #include "i_classifier.hpp"
 #include "e_creature_categories.hpp"
@@ -23,4 +23,4 @@ private:
 };
 
 
-#endif // MONSTER_CLASSIFIER_H
+#endif // MONSTER_CLASSIFIER_HPP

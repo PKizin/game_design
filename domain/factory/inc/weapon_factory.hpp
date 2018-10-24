@@ -1,5 +1,5 @@
-#ifndef WEAPON_FACTORY_H
-#define WEAPON_FACTORY_H
+#ifndef WEAPON_FACTORY_HPP
+#define WEAPON_FACTORY_HPP
 
 #include "i_factory.hpp"
 #include "e_item_categories.hpp"
@@ -29,4 +29,4 @@ private:
 };
 
 
-#endif // WEAPON_FACTORY_H
+#endif // WEAPON_FACTORY_HPP

@@ -1,5 +1,5 @@
-#ifndef I_CREATURE_FACTORY_H
-#define I_CREATURE_FACTORY_H
+#ifndef I_CREATURE_FACTORY_HPP
+#define I_CREATURE_FACTORY_HPP
 
 
 class ICreatureFactory {
@@ -12,4 +12,4 @@ protected:
 };
 
 
-#endif // I_CREATURE_FACTORY_H
+#endif // I_CREATURE_FACTORY_HPP

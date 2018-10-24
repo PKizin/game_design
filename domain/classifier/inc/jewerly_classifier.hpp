@@ -1,5 +1,5 @@
-#ifndef JEWERLY_CLASSIFIER_H
-#define JEWERLY_CLASSIFIER_H
+#ifndef JEWERLY_CLASSIFIER_HPP
+#define JEWERLY_CLASSIFIER_HPP
 
 #include "i_classifier.hpp"
 #include "e_item_categories.hpp"
@@ -26,4 +26,4 @@ private:
 };
 
 
-#endif // JEWERLY_CLASSIFIER_H
+#endif // JEWERLY_CLASSIFIER_HPP

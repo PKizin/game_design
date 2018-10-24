@@ -1,5 +1,5 @@
-#ifndef ARMOR_H
-#define ARMOR_H
+#ifndef ARMOR_HPP
+#define ARMOR_HPP
 
 #include "i_item.hpp"
 #include "armor_classifier.hpp"
@@ -34,4 +34,4 @@ private:
 };
 
 
-#endif // ARMOR_H
+#endif // ARMOR_HPP

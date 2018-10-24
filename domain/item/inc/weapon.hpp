@@ -1,5 +1,5 @@
-#ifndef WEAPON_H
-#define WEAPON_H
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
 #include "i_item.hpp"
 #include "weapon_classifier.hpp"
@@ -34,4 +34,4 @@ private:
 };
 
 
-#endif // WEAPON_H
+#endif // WEAPON_HPP

@@ -1,5 +1,5 @@
-#ifndef I_CLASSIFIER_H
-#define I_CLASSIFIER_H
+#ifndef I_CLASSIFIER_HPP
+#define I_CLASSIFIER_HPP
 
 #include "i_class_classifier.hpp"
 #include "i_type_classifier.hpp"
@@ -29,4 +29,4 @@ protected:
 };
 
 
-#endif // I_CLASSIFIER_H
+#endif // I_CLASSIFIER_HPP

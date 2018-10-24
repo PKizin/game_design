@@ -1,5 +1,5 @@
-#ifndef HUMAN_CLASSIFIER_H
-#define HUMAN_CLASSIFIER_H
+#ifndef HUMAN_CLASSIFIER_HPP
+#define HUMAN_CLASSIFIER_HPP
 
 #include "i_classifier.hpp"
 #include "e_creature_categories.hpp"
@@ -23,4 +23,4 @@ private:
 };
 
 
-#endif // HUMAN_CLASSIFIER_H
+#endif // HUMAN_CLASSIFIER_HPP

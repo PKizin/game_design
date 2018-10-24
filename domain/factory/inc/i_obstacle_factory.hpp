@@ -1,5 +1,5 @@
-#ifndef I_OBSTACLE_FACTORY_H
-#define I_OBSTACLE_FACTORY_H
+#ifndef I_OBSTACLE_FACTORY_HPP
+#define I_OBSTACLE_FACTORY_HPP
 
 
 class IObstacleFactory {
@@ -12,4 +12,4 @@ protected:
 };
 
 
-#endif // I_OBSTACLE_FACTORY_H
+#endif // I_OBSTACLE_FACTORY_HPP

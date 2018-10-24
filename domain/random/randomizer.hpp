@@ -1,5 +1,5 @@
-#ifndef RANDOMIZER_H
-#define RANDOMIZER_H
+#ifndef RANDOMIZER_HPP
+#define RANDOMIZER_HPP
 
 #include <string>
 
@@ -21,4 +21,4 @@ private:
 };
 
 
-#endif // RANDOMIZER_H
+#endif // RANDOMIZER_HPP

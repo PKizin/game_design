@@ -1,5 +1,5 @@
-#ifndef I_MATERIAL_CLASSIFIER_H
-#define I_MATERIAL_CLASSIFIER_H
+#ifndef I_MATERIAL_CLASSIFIER_HPP
+#define I_MATERIAL_CLASSIFIER_HPP
 
 
 class IMaterialClassifier {
@@ -12,4 +12,4 @@ protected:
     virtual ~IMaterialClassifier() { }
 };
 
-#endif // I_MATERIAL_CLASSIFIER_H
+#endif // I_MATERIAL_CLASSIFIER_HPP

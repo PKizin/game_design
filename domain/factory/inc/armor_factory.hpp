@@ -1,5 +1,5 @@
-#ifndef ARMOR_FACTORY_H
-#define ARMOR_FACTORY_H
+#ifndef ARMOR_FACTORY_HPP
+#define ARMOR_FACTORY_HPP
 
 #include "i_factory.hpp"
 #include "e_item_categories.hpp"
@@ -31,4 +31,4 @@ private:
 };
 
 
-#endif // ARMOR_FACTORY_H
+#endif // ARMOR_FACTORY_HPP

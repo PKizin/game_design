@@ -1,5 +1,5 @@
-#ifndef I_ACTION_H
-#define I_ACTION_H
+#ifndef I_ACTION_HPP
+#define I_ACTION_HPP
 
 class ICreature;
 class IItem;
@@ -23,4 +23,4 @@ protected:
 };
 
 
-#endif // I_ACTION_H
+#endif // I_ACTION_HPP

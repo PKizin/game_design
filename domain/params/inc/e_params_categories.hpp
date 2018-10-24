@@ -1,5 +1,5 @@
-#ifndef E_PARAMS_CATEGORIES_H
-#define E_PARAMS_CATEGORIES_H
+#ifndef E_PARAMS_CATEGORIES_HPP
+#define E_PARAMS_CATEGORIES_HPP
 
 #include <string>
 
@@ -108,4 +108,4 @@ const EPosParams EPosParam[] = {
 };
 
 
-#endif // E_PARAMS_CATEGORIES_H
+#endif // E_PARAMS_CATEGORIES_HPP

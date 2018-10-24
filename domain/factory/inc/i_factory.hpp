@@ -1,5 +1,5 @@
-#ifndef I_FACTORY_H
-#define I_FACTORY_H
+#ifndef I_FACTORY_HPP
+#define I_FACTORY_HPP
 
 #include "i_classifier_factory.hpp"
 #include "i_params_factory.hpp"
@@ -22,4 +22,4 @@ protected:
 };
 
 
-#endif // I_FACTORY
+#endif // I_FACTORY_HPP

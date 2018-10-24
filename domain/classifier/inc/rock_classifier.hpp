@@ -1,5 +1,5 @@
-#ifndef ROCK_CLASSIFIER_H
-#define ROCK_CLASSIFIER_H
+#ifndef ROCK_CLASSIFIER_HPP
+#define ROCK_CLASSIFIER_HPP
 
 #include "i_classifier.hpp"
 #include "e_obstacle_categories.hpp"
@@ -23,4 +23,4 @@ private:
 };
 
 
-#endif // ROCK_CLASSIFIER_H
+#endif // ROCK_CLASSIFIER_HPP

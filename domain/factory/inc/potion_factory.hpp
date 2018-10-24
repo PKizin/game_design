@@ -1,5 +1,5 @@
-#ifndef POTION_FACTORY_H
-#define POTION_FACTORY_H
+#ifndef POTION_FACTORY_HPP
+#define POTION_FACTORY_HPP
 
 #include "i_factory.hpp"
 #include "e_item_categories.hpp"
@@ -27,4 +27,4 @@ private:
 };
 
 
-#endif // POTION_FACTORY_H
+#endif // POTION_FACTORY_HPP

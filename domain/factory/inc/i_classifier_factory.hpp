@@ -1,5 +1,5 @@
-#ifndef I_CLASSIFIER_FACTORY_H
-#define I_CLASSIFIER_FACTORY_H
+#ifndef I_CLASSIFIER_FACTORY_HPP
+#define I_CLASSIFIER_FACTORY_HPP
 
 #include "i_classifier.hpp"
 
@@ -14,4 +14,4 @@ protected:
 };
 
 
-#endif // I_CLASSIFIER_FACTORY_H
+#endif // I_CLASSIFIER_FACTORY_HPP

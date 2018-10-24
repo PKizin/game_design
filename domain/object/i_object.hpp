@@ -1,5 +1,5 @@
-#ifndef I_OBJECT_H
-#define I_OBJECT_H
+#ifndef I_OBJECT_HPP
+#define I_OBJECT_HPP
 
 #include "i_classifier.hpp"
 #include "i_params.hpp"
@@ -18,4 +18,4 @@ protected:
 };
 
 
-#endif // I_OBJECT_H
+#endif // I_OBJECT_HPP

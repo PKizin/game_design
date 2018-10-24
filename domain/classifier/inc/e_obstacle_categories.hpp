@@ -1,5 +1,5 @@
-#ifndef E_OBSTACLE_CATEGORIES_H
-#define E_OBSTACLE_CATEGORIES_H
+#ifndef E_OBSTACLE_CATEGORIES_HPP
+#define E_OBSTACLE_CATEGORIES_HPP
 
 
 struct SObstacleClass {
@@ -54,4 +54,4 @@ typedef SRockType::ERockType RockType;
 typedef STreeType::ETreeType TreeType;
 
 
-#endif // E_OBSTACLE_CATEGORIES_H
+#endif // E_OBSTACLE_CATEGORIES_HPP

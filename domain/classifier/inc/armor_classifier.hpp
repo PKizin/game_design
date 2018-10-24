@@ -1,5 +1,5 @@
-#ifndef ARMOR_CLASSIFIER_H
-#define ARMOR_CLASSIFIER_H
+#ifndef ARMOR_CLASSIFIER_HPP
+#define ARMOR_CLASSIFIER_HPP
 
 #include "i_classifier.hpp"
 #include "e_item_categories.hpp"
@@ -29,5 +29,5 @@ private:
 };
 
 
-#endif // ARMOR_CLASSIFIER_H
+#endif // ARMOR_CLASSIFIER_HPP
 

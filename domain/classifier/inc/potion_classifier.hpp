@@ -1,5 +1,5 @@
-#ifndef POTION_CLASSIFIER_H
-#define POTION_CLASSIFIER_H
+#ifndef POTION_CLASSIFIER_HPP
+#define POTION_CLASSIFIER_HPP
 
 #include "i_classifier.hpp"
 #include "e_item_categories.hpp"
@@ -29,4 +29,4 @@ private:
 };
 
 
-#endif // POTION_CLASSIFIER_H
+#endif // POTION_CLASSIFIER_HPP

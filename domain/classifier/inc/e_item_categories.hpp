@@ -1,5 +1,5 @@
-#ifndef E_ITEM_CATEGORIES_H
-#define E_ITEM_CATEGORIES_H
+#ifndef E_ITEM_CATEGORIES_HPP
+#define E_ITEM_CATEGORIES_HPP
 
 #include <string>
 
@@ -122,4 +122,4 @@ typedef SPotionType::EPotionType            PotionType;
 typedef SPotionProperty1::EPotionProperty1  PotionProperty1;
 
 
-#endif // E_ITEM_CATEGORIES_H
+#endif // E_ITEM_CATEGORIES_HPP

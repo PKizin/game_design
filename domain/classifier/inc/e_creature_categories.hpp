@@ -1,5 +1,5 @@
-#ifndef E_CREATURE_CATEGORIES_H
-#define E_CREATURE_CATEGORIES_H
+#ifndef E_CREATURE_CATEGORIES_HPP
+#define E_CREATURE_CATEGORIES_HPP
 
 
 struct SCreatureClass {
@@ -36,4 +36,4 @@ typedef SHumanType::EHumanType          HumanType;
 typedef SMonsterType::EMonsterType      MonsterType;
 
 
-#endif // E_CREATURE_CATEGORIES_H
+#endif // E_CREATURE_CATEGORIES_HPP

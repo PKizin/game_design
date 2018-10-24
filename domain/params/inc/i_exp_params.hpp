@@ -1,5 +1,5 @@
-#ifndef I_EXP_PARAMS_H
-#define I_EXP_PARAMS_H
+#ifndef I_EXP_PARAMS_HPP
+#define I_EXP_PARAMS_HPP
 
 #include "e_params_categories.hpp"
 
@@ -15,4 +15,4 @@ protected:
 };
 
 
-#endif // I_EXP_PARAMS_H
+#endif // I_EXP_PARAMS_HPP

@@ -1,5 +1,5 @@
-#ifndef PG_TESTER_H
-#define PG_TESTER_H
+#ifndef PG_TESTER_HPP
+#define PG_TESTER_HPP
 
 #include "libpq-fe.h"
 #include <string>
@@ -34,4 +34,4 @@ private:
 };
 
 
-#endif // PG_TESTER_H
+#endif // PG_TESTER_HPP

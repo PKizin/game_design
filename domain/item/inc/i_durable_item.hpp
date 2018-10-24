@@ -1,5 +1,5 @@
-#ifndef I_DURABLE_ITEM_H
-#define I_DURABLE_ITEM_H
+#ifndef I_DURABLE_ITEM_HPP
+#define I_DURABLE_ITEM_HPP
 
 
 class IDurableItem {
@@ -13,4 +13,4 @@ protected:
 };
 
 
-#endif // I_DURABLE_ITEM_H
+#endif // I_DURABLE_ITEM_HPP

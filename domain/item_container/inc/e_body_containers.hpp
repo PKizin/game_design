@@ -1,5 +1,5 @@
-#ifndef E_BODY_CONTAINERS_H
-#define E_BODY_CONTAINERS_H
+#ifndef E_BODY_CONTAINERS_HPP
+#define E_BODY_CONTAINERS_HPP
 
 #include "e_item_categories.hpp"
 
@@ -30,4 +30,4 @@ typedef SJewerlyType::EJewerlyType          BodyJewerly;
 typedef SBodyActiveSlots::EBodyActiveSlots  BodyActiveSlots;
 
 
-#endif // E_BODY_CONTAINERS_H
+#endif // E_BODY_CONTAINERS_HPP

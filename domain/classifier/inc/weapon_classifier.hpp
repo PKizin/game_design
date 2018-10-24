@@ -1,5 +1,5 @@
-#ifndef WEAPON_CLASSIFIER_H
-#define WEAPON_CLASSIFIER_H
+#ifndef WEAPON_CLASSIFIER_HPP
+#define WEAPON_CLASSIFIER_HPP
 
 #include "i_classifier.hpp"
 #include "e_item_categories.hpp"
@@ -32,4 +32,4 @@ private:
 };
 
 
-#endif // WEAPON_CLASSIFIER_H
+#endif // WEAPON_CLASSIFIER_HPP

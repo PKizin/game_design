@@ -1,5 +1,5 @@
-#ifndef I_ITEM_FACTORY_H
-#define I_ITEM_FACTORY_H
+#ifndef I_ITEM_FACTORY_HPP
+#define I_ITEM_FACTORY_HPP
 
 #include "i_item.hpp"
 
@@ -14,4 +14,4 @@ protected:
 };
 
 
-#endif // I_ITEM_FACTORY_H
+#endif // I_ITEM_FACTORY_HPP

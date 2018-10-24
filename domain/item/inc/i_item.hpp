@@ -1,5 +1,5 @@
-#ifndef I_ITEM_H
-#define I_ITEM_H
+#ifndef I_ITEM_HPP
+#define I_ITEM_HPP
 
 #include "i_object.hpp"
 #include "i_durable_item.hpp"
@@ -31,4 +31,4 @@ private:
 };
 
 
-#endif // I_ITEM_H
+#endif // I_ITEM_HPP

@@ -1,5 +1,5 @@
-#ifndef TERRAIN_CLASSIFIER_H
-#define TERRAIN_CLASSIFIER_H
+#ifndef TERRAIN_CLASSIFIER_HPP
+#define TERRAIN_CLASSIFIER_HPP
 
 #include "i_classifier.hpp"
 #include "e_obstacle_categories.hpp"
@@ -23,4 +23,4 @@ private:
 };
 
 
-#endif // TERRAIN_CLASSIFIER_H
+#endif // TERRAIN_CLASSIFIER_HPP

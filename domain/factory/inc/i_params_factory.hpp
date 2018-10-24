@@ -1,5 +1,5 @@
-#ifndef I_PARAMS_FACTORY_H
-#define I_PARAMS_FACTORY_H
+#ifndef I_PARAMS_FACTORY_HPP
+#define I_PARAMS_FACTORY_HPP
 
 #include "i_params.hpp"
 #include "i_classifier.hpp"
@@ -15,4 +15,4 @@ protected:
 };
 
 
-#endif // I_PARAMS_FACTORY_H
+#endif // I_PARAMS_FACTORY_HPP

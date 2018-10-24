@@ -1,5 +1,5 @@
-#ifndef I_TYPE_CLASSIFIER_H
-#define I_TYPE_CLASSIFIER_H
+#ifndef I_TYPE_CLASSIFIER_HPP
+#define I_TYPE_CLASSIFIER_HPP
 
 
 class ITypeClassifier {
@@ -12,4 +12,4 @@ protected:
     virtual ~ITypeClassifier() { }
 };
 
-#endif // I_TYPE_CLASSIFIER_H
+#endif // I_TYPE_CLASSIFIER_HPP

@@ -1,5 +1,5 @@
-#ifndef I_PROPERTY_CLASSIFIER_H
-#define I_PROPERTY_CLASSIFIER_H
+#ifndef I_PROPERTY_CLASSIFIER_HPP
+#define I_PROPERTY_CLASSIFIER_HPP
 
 
 class IPropertyClassifier {
@@ -12,4 +12,4 @@ protected:
     virtual ~IPropertyClassifier() { }
 };
 
-#endif // I_PROPERTY_CLASSIFIER_H
+#endif // I_PROPERTY_CLASSIFIER_HPP
