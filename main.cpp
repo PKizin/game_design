@@ -12,6 +12,9 @@
 #include "randomizer.hpp"
 #include "pg_tester.hpp"
 #include "i_action.hpp"
+#include "i_behavior.hpp"
+#include "i_inventory.hpp"
+#include "i_creature.hpp"
 #include "e_body_containers.hpp"
 using namespace std;
 

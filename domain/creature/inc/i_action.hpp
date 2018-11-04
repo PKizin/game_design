@@ -12,9 +12,9 @@ public:
     virtual void use() = 0;
 
     virtual void set_target(const ICreature&) = 0;
-    virtual void set_use_item(const IItem&) = 0;
-
     virtual bool search(ICreature&) = 0;
+
+    virtual void set_use_item(const IItem&) = 0;
 
 protected:
     IAction() { }
