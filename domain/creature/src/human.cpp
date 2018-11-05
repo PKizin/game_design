@@ -1,4 +1,7 @@
 #include "human.hpp"
+#include "i_move_strategy.hpp"
+#include "i_hit_strategy.hpp"
+#include "i_search_strategy.hpp"
 
 
 Human::Human() {
@@ -7,10 +10,23 @@ Human::Human() {
 Human::~Human() {
 }
 
+
 void Human::move(enum EDirection dir) {
+    if (_move_strategy) {
+        _move_strategy->move(*this, dir);
+    }
 }
 
 void Human::hit() {
+    if (_hit_strategy) {
+        _hit_strategy->hit(*this);
+    }
+}
+
+void Human::search() {
+    if (_search_strategy) {
+        _search_strategy->search(*this);
+    }
 }
 
 void Human::loot() {
@@ -19,15 +35,19 @@ void Human::loot() {
 void Human::use() {
 }
 
-bool Human::search(ICreature& target) {
-    return false;
-}
 
 void Human::set_target(const ICreature& target) {
+    _target = &const_cast<ICreature&>(target);
+}
+
+bool Human::has_target() {
+    return (_target != nullptr);
 }
 
 void Human::set_use_item(const IItem& item) {
+    _use_item = &const_cast<IItem&>(item);
 }
+
 
 void Human::get_classifier(IClassifier& cla) const {
 }
@@ -40,6 +60,7 @@ void Human::get_params(IParams& par) const {
 
 void Human::set_params(const IParams& par) {
 }
+
 
 void Human::get_move_strategy(IMoveStrategy& move_str) const {
 }
@@ -58,6 +79,7 @@ void Human::get_search_strategy(ISearchStrategy& search_str) const {
 
 void Human::set_search_strategy(const ISearchStrategy& search_str) {
 }
+
 
 void Human::get_body(IItemContainer& body) const {
 }

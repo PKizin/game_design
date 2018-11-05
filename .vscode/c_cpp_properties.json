@@ -12,6 +12,7 @@
                 "${workspaceFolder}/domain/item/inc",
                 "${workspaceFolder}/domain/item_container/inc",
                 "${workspaceFolder}/domain/factory/inc",
+                "${workspaceFolder}/domain/strategy/inc",
                 "${workspaceFolder}/database"
             ],
             "defines": [
@@ -36,6 +37,7 @@
                 "${workspaceFolder}/domain/item/inc",
                 "${workspaceFolder}/domain/item_container/inc",
                 "${workspaceFolder}/domain/factory/inc",
+                "${workspaceFolder}/domain/strategy/inc",
                 "${workspaceFolder}/database",
                 "C:/Program Files (x86)/PostgreSQL/10/include"
             ],

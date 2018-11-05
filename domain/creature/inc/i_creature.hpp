@@ -11,11 +11,12 @@ class ICreature : public IAction, public IObject, public IBehavior, public IInve
 public:
     virtual void move(enum EDirection) = 0;
     virtual void hit() = 0;
+    virtual void search() = 0;
     virtual void loot() = 0;
     virtual void use() = 0;
 
-    virtual bool search(ICreature&) = 0;
     virtual void set_target(const ICreature&) = 0;
+    virtual bool has_target() = 0;
     virtual void set_use_item(const IItem&) = 0;
 
     virtual void get_classifier(IClassifier&) const = 0;
