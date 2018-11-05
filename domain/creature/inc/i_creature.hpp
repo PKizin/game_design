@@ -1,6 +1,11 @@
 #ifndef I_CREATURE_HPP
 #define I_CREATURE_HPP
 
+#include "i_action.hpp"
+#include "i_object.hpp"
+#include "i_behavior.hpp"
+#include "i_inventory.hpp"
+
 
 class ICreature : public IAction, public IObject, public IBehavior, public IInventory {
 public:

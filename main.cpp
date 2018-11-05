@@ -15,6 +15,7 @@
 #include "i_behavior.hpp"
 #include "i_inventory.hpp"
 #include "i_creature.hpp"
+#include "human.hpp"
 #include "e_body_containers.hpp"
 using namespace std;
 
@@ -45,5 +46,8 @@ int main() {
     //PGtester tester("postgres_win1252", "postgres", "1");
     //tester.test();
     
+    const ICreature& human = Human();
+
+
     return 0;
 }
